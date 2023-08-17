@@ -1,0 +1,294 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Research areas</title>
+<link rel="stylesheet" type="text/css" href="files/default.css">
+</head>
+
+<body bgcolor="#ccccff">
+	<table>
+		<tbody><tr valign='top'>
+
+	<td id="layout-menu">
+		<div class="menu-category">Main</div>
+		<div class="menu-item"><a href="index.html">Home</a></div>
+		<div class="menu-item"><a href="projects.html">Research</a></div>
+		<div class="menu-item"><a href="group.html">Group</a></div>
+		<div class="menu-item"><a href="teaching.html">Teaching</a></div>
+		<div class="menu-item"><a href="services.html">Services</a></div>
+		<div class="menu-item"><a href="CV_SihongXie_Apr_2022.pdf">CV</a></div>
+		<div class="menu-item"><a href="reading.html">Reading</a></div>
+		<div class="menu-item"><a href="codes.html">Codes and Data</a></div>
+		<div class="menu-category">Misc.</div>
+		<div class="menu-item"><a href="http://cs.lehigh.edu/">CSE department</a></div>
+		<div class="menu-item"><a href="courses.html">Interesting Courses</a></div>
+	</td>
+
+
+		<td id="layout-content">
+<h2>Research Areas</h2>
+<div>
+<table border="0" width="100%">
+	<tbody>
+	<!-- all publications -->
+	<tr>
+		<td>
+		</td>
+		<td style="color:#595959; font-family=Palatino; font-size:11pt">
+			<div>
+				All publications can be found <a href="papers.html">here</a>
+				and <a href="https://scholar.google.com/citations?user=qRp1xZwAAAAJ&hl=en">Google Scholar</a>.
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	
+
+	<!-- Area 0 -->
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='area'>
+				Explainable and fair ML on graphs
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='synopsis'>
+				Graphs are ubiquitous in many applications, such as molecular biochemistry, neural science, Internet, computer vision, NLP, and crowdsourcing
+				[<a href='papers.html#icdm2021_c'>ICDM2021c</a>]).
+				Machine learning on graphs, especially with neural networks, has demonstrate accurate predictive power. PI Xie is investigating explainability and fairness beyond accuracy.
+			       	(i) On large graphs, power-law degree distributions are common and can lead to fairness issues in the graphical models and affect end-users.
+			        We propose a linear system to certificate if multiple desired fairness criteria can be fulfilled simultaneously, and if not,
+				a multi-objective optimization algorithm to find Pareto fronts for efficient trade-offs among the criteria 
+				[<a href='papers.html#cikm2021'>CIKM2021</a>]).
+				To reduce optimization cost, the team proposes continuous Pareto front exploration
+				by exploiting the smoothness of the set of Pareto optima.
+				(ii) Graphical models can be hard to understand by human users due to multiplexed information propagations over many edges.
+				The team published a series of works addressing challenges in making graphical models more interpretable,
+				such as
+				large discrete search space
+				[<a href='papers.html#icdm2019'>ICDM2019</a>]),
+				axiomatic attribution
+				[<a href='papers.html#cikm2020'>CIKM2020</a>]),
+				multi-objective explanations
+				[<a href='papers.html#icdm2021_a'>ICDM2021a</a>]),
+				and robustness of explanations via constrained optimization 
+				[<a href='papers.html#icdm2021_b'>ICDM2021b</a>]).
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+
+	<!-- Area 1 -->
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='area'>
+				Trustworthy fraud detection
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='synopsis'>
+				Online medias, such as Yelp, TripAdvisor and Amazon, are full of opinionated information that can significantly influence
+				a large number of customers' decisions.
+				Due to the ``word-of-mouth'' effect,
+				dishonest businesses have adopted unethical or even illegal marketing strategies by paying
+				spammers to post fake reviews (opinion spams) to promote or demote the targets businesses and products, leading to trustworthiness issues
+				of the online contents.
+				To address the issue, trustworthy (defined by <b>AIR</b>="Accurate, Interpretable, and Robust") fraud detections is required (sketched in
+				[<a href='papers.html#cic2018'>CIC2018</a>]).
+				We've adopted propagations over networks
+				[<a href='papers.html#icdm2011'>ICDM2011</a>],
+				temporal patterns
+				[<a href='papers.html#kdd2012'>KDD2012</a>],
+				text features
+				[<a href='papers.html#dsaa2015'>DSAA2015</a>] and
+				multi-source data
+				[<a href='papers.html#bigdata2016a'>BigData2016a</a>,
+				<a href='papers.html#bigdata2015'>BigData2015</a>].
+				Spam detectors are also constantly under attack of adversarial spammers in a changing environments and robust detectors
+				are critical
+				[<a href='papers.html#bigdata2018'>BigData2018</a>,
+				<a href='papers.html#kdd2020'>KDD 2020</a>].
+			</div>
+		</td>
+		<td>
+			<!--<img src="smiley.gif" alt="Smiley face" width="42" height="42"> -->
+		</td>
+	</tr>
+
+	<!-- Area 2 -->
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='area'>
+				Ensemble and model fusion
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='synopsis'>
+				An ensemble of multiple models, if fused properly, can provide more predictive power than any constituent model.
+				Traditional ensemble methods, with a long history, studied the fusion of a small number of predictive models for binary and multi-class prediction.
+				We move this field forward by targeting at fusing many unidentifiable predictive models,
+				such as crowdsourcing workers,
+				with sparse and structured output such as sets, rankings, and trees.
+				The challenges are to gauge the individual model's performance
+				and to take into account the extra knowledge of the output space. Please check
+				out these three papers
+				[<a href='papers.html#icdm2013'>ICDM2013</a>,
+					<a href='papers.html#dsaa2015b'>DSAA2015</a>,
+					<a href='papers.html#cikm2016a'>CIKM2016a</a>]
+				along with others
+				[<a href='papers.html#sdm2012'>SDM2012</a>,
+					<a href='papers.html#kdd2014'>KDD2014</a>,
+					<a href='papers.html#sdm2015b'>SDM2015b</a>].
+				Along with Dr. Qi Li from Iowa State, we extended the framework to address fusion problem on sequential data found in natural language processing
+					[<a href='papers.html#icdm2021_c'>ICDM2021_c</a>].
+
+			</div>
+		</td>
+		<td>
+			<!--<img src="smiley.gif" alt="Smiley face" width="42" height="42"> -->
+		</td>
+	</tr>
+	
+	<!-- Area 3 -->
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='area'>
+				Extreme Multi-labeled Learning
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1%">
+		</td>
+		<td width="69%">
+			<div class='synopsis'>
+				Multi-labeled learning is a technique to assign more than one semantic concepts to a data item and has found wide applications in areas
+				such as bioinformatics, healthcare, e-commerce, and social media.
+				Big data have changed the landscape of multi-labeled learning by increasing the number of labels to an unprecedented scale.
+			       	For example, there are tens of thousands of tags (as labels) for texts
+				on Stackoverflow and Yahoo Answer, and
+				millions of tags for images on Flickr.
+				Extreme multi-labeled learning tries to scale up the traditional multi-labeled learning
+				to handle the large number of labels with varying importance, sparsity, and informativeness.
+				My current research tries to address the scalability challenges in many aspects
+				through the help of NLP, knowledgebases, and crowdsourcing. See
+				[<a href='papers.html#bigdata2016a'>BIGDATA2016a</a>
+					<a href='papers.html#cikm2016b'>CIKM2016b</a>
+					<a href='papers.html#sdm2016a'>SDM2016a</a>]
+				for the on-going research on the topic.
+			</div>
+		</td>
+		<td width="30%">
+			<!--<img src="smiley.gif" alt="Smiley face" width="42" height="42"> -->
+		</td>
+	</tr>
+	
+	<!-- Area 4 -->
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='area'>
+				
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='synopsis'>
+				 
+			</div>
+		</td>
+		<td>
+			<!--<img src="smiley.gif" alt="Smiley face" width="42" height="42"> -->
+		</td>
+	</tr>
+
+	</tbody>
+</table>
+</div>
+<h2>Funding</h2>
+<div>
+<table>
+	<tbody>
+	<tr>
+		<td>
+		</td>
+		<td style="color:#595959; font-family=Palatino; font-size:11pt">
+			<div>
+
+				We are thankful to following funding agencies for their support to our research.
+				<ul>
+					<li> <span style="color:#4AEAB6">CAREER</span>: Bilevel Optimization for Accountable Machine Learning on Graphs (NSF IIS-<a href='https://www.nsf.gov/awardsearch/showAward?AWD_ID=2145922&HistoricalAwards=false'>2145922</a>)</li>
+					
+					<li> Program in the Foundations and Applications of Mathematical Optimization and Data Science (Lehigh <a href='https://research.cc.lehigh.edu/researchfutures'>Research Future</a> Grant)</li>
+					<li> Efficient, explainable and robust data scientific methods for smart engineering systems (Lehigh <a href='https://research.cc.lehigh.edu/sites/research.cc.lehigh.edu/files/documents/VPRO/Accelerator%20Award%20History.pdf'>Accelerator</a> Grant)</li>
+					<li>Algorithms, systems, and theories for exploiting data dependencies in crowdsourcing (NSF IIS-<a href='https://www.nsf.gov/awardsearch/showAward?AWD_ID=2008155&HistoricalAwards=false'>2008155</a>)</li>
+					<li>Learning Dynamic and Robust Defenses Against Co-Adaptive Spammers (NSF CNS-<a href='https://www.nsf.gov/awardsearch/showAward?AWD_ID=1931042&HistoricalAwards=false'>1931042</a>)</li>
+				</ul>
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='area'>
+
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		</td>
+		<td>
+			<img src="img/nsf.gif" alt="NSF" height="80">	
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>
+</div>
+</html>
