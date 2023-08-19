@@ -94,8 +94,25 @@ div.menu-category {
 	font-weight: bold;
 	line-height: 10px;
 }
+
+a:link {
+  color: #527bbd;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  background-color: transparent;
+  text-decoration: none;
+}
 a:hover {
-	border-bottom: 1px gray dotted;
+
+  background-color: transparent;
+  text-decoration: underline;
+  border-bottom: 1px gray dotted;
+}
+a:active {
+  background-color: transparent;
+  text-decoration: underline;
 }
 .pdflink{ font-size: 16px; text-decoration: underline; color: #00000f;}
 h1, h2, h3, h4, h5, h6 {
