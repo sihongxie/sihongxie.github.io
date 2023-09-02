@@ -27,7 +27,7 @@
 
 
 		<td id="layout-content">
-<h2>Research outline</h2>
+<h2>Research Projects</h2>
 <div>
 <table border="0" width="100%">
 	<tbody>
@@ -37,7 +37,18 @@
 		</td>
 		<td style="color:#595959; font-family=Palatino; font-size:12pt">
 			<div>
-				All publications can be found <a href="papers.html">here</a>
+				Research Overview
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		</td>
+		<td style="color:#595959; font-family=Palatino; font-size:12pt">
+			<div>
+				All publications can be found <a href="publications.html">here</a>
 				and <a href="https://scholar.google.com/citations?user=qRp1xZwAAAAJ&hl=en">Google Scholar</a>.
 			</div>
 		</td>
@@ -52,7 +63,7 @@
 		</td>
 		<td>
 			<div class='area'>
-				Explainable and fair ML on graphs
+				Responsible machine learning on graphs
 			</div>
 		</td>
 		<td>
@@ -64,26 +75,35 @@
 		</td>
 		<td>
 			<div class='synopsis'>
-				Graphs are ubiquitous in many applications, such as molecular biochemistry, neural science, Internet, computer vision, NLP, and crowdsourcing
-				[<a href='papers.html#icdm2021_c'>ICDM2021c</a>]).
-				Machine learning on graphs, especially with neural networks, has demonstrate accurate predictive power. PI Xie is investigating explainability and fairness beyond accuracy.
+				Graphs are ubiquitous in many applications, such as molecular biochemistry, neural science, Internet, computer vision, NLP, and crowdsourcing.	
+				Machine learning on graphs, especially with neural networks, has demonstrated prediction accuracy. However, accuracy is not the only desideratum,
+				and humans and society can still be negatively impacted by the models if care is not taken. For example, a model can lack of transparency so that it is hard to understand why a model make a prediction;
+				a model's accuracy may drop due to slight perturbations;
+				or an accurate model can treat different demographical groups or individuals in an unfair way.
+				We aim to make the models more responsible by investigating explainability, fairness, and robustness beyond accuracy of the models.
 			       	(i) On large graphs, power-law degree distributions are common and can lead to fairness issues in the graphical models and affect end-users.
 			        We propose a linear system to certificate if multiple desired fairness criteria can be fulfilled simultaneously, and if not,
 				a multi-objective optimization algorithm to find Pareto fronts for efficient trade-offs among the criteria 
-				[<a href='papers.html#cikm2021'>CIKM2021</a>]).
+				[<a href='publications.html#cikm2021'>CIKM2021</a>]).
 				To reduce optimization cost, the team proposes continuous Pareto front exploration
 				by exploiting the smoothness of the set of Pareto optima.
+				As graphs can contain hidden factors to complicate fairness issues,
+				we simultaneously learn a fair models and identify such hidden factors to mitigate the issues
+				[<a href='publications.html#kdd2023ws_2'>KDD2023</a>]),
 				(ii) Graphical models can be hard to understand by human users due to multiplexed information propagations over many edges.
 				The team published a series of works addressing challenges in making graphical models more interpretable,
 				such as
 				large discrete search space
-				[<a href='papers.html#icdm2019'>ICDM2019</a>]),
+				[<a href='publications.html#icdm2019'>ICDM2019</a>]),
 				axiomatic attribution
-				[<a href='papers.html#cikm2020'>CIKM2020</a>]),
+				[<a href='publications.html#cikm2020'>CIKM2020</a>]),
 				multi-objective explanations
-				[<a href='papers.html#icdm2021_a'>ICDM2021a</a>]),
-				and robustness of explanations via constrained optimization 
-				[<a href='papers.html#icdm2021_b'>ICDM2021b</a>]).
+				[<a href='publications.html#icdm2021_a'>ICDM2021a</a>]).
+				Lastly, robustness can be interpreted broadly as maintaining any desired properties under reasonably slight perturbations.
+				We study robustness of explanations through the tools of constrained optimization
+				[<a href='publications.html#icdm2021_b'>ICDM2021b</a>])
+				robust optimization, statistical theory, and optimization convergence analysis 
+				[<a href='publications.html#icml2023ws'>ICML2023</a>])
 			</div>
 		</td>
 		<td>
@@ -96,7 +116,7 @@
 		</td>
 		<td>
 			<div class='area'>
-				Trustworthy fraud detection
+				Misinformation detection
 			</div>
 		</td>
 		<td>
@@ -108,27 +128,29 @@
 		</td>
 		<td>
 			<div class='synopsis'>
-				Online medias, such as Yelp, TripAdvisor and Amazon, are full of opinionated information that can significantly influence
-				a large number of customers' decisions.
-				Due to the ``word-of-mouth'' effect,
-				dishonest businesses have adopted unethical or even illegal marketing strategies by paying
-				spammers to post fake reviews (opinion spams) to promote or demote the targets businesses and products, leading to trustworthiness issues
-				of the online contents.
-				To address the issue, trustworthy (defined by <b>AIR</b>="Accurate, Interpretable, and Robust") fraud detections is required (sketched in
-				[<a href='papers.html#cic2018'>CIC2018</a>]).
+				Online contents hosted on Twitter (now X), Yelp, Amazon, etc. are full of opinionated information that can significantly influence audience's decision making.
+				For example, during the COVID pandemic, information about vaccines can significantly influence the rate of vaccinations; dishonest entities have adopted unethical or even illegal strategies by paying spammers to post fake reviews (opinion spams) to promote or demote the targets businesses and producs.
+				Such activities lead to trust crisis of the online contents.
+				To address the issue, misinformation detection is necessary. 
+				<!--[<a href='publications.html#cic2018'>CIC2018</a>]).-->
 				We've adopted propagations over networks
-				[<a href='papers.html#icdm2011'>ICDM2011</a>],
+				[<a href='publications.html#icdm2011'>ICDM2011</a>],
 				temporal patterns
-				[<a href='papers.html#kdd2012'>KDD2012</a>],
+				[<a href='publications.html#kdd2012'>KDD2012</a>],
 				text features
-				[<a href='papers.html#dsaa2015'>DSAA2015</a>] and
+				[<a href='publications.html#dsaa2015'>DSAA2015</a>] and
 				multi-source data
-				[<a href='papers.html#bigdata2016a'>BigData2016a</a>,
-				<a href='papers.html#bigdata2015'>BigData2015</a>].
-				Spam detectors are also constantly under attack of adversarial spammers in a changing environments and robust detectors
+				[<a href='publications.html#bigdata2016a'>BigData2016a</a>,
+				<a href='publications.html#bigdata2015'>BigData2015</a>,
+				<a href='publications.html#tdke2023'>tkde2023</a>
+				]
+				Misinformation detectors are also constantly under attack of adversarial spammers in a changing environments and robust detectors
 				are critical
-				[<a href='papers.html#bigdata2018'>BigData2018</a>,
-				<a href='papers.html#kdd2020'>KDD 2020</a>].
+				[<a href='publications.html#bigdata2018'>BigData2018</a>,
+				<a href='publications.html#kdd2020'>KDD 2020</a>].
+				Besides robustness, we study interpretable and fair detection.
+				[<a href='publications.html#'>BigData2018</a>,
+				<a href='publications.html#kdd2020'>KDD 2020</a>].
 			</div>
 		</td>
 		<td>
@@ -162,15 +184,15 @@
 				The challenges are to gauge the individual model's performance
 				and to take into account the extra knowledge of the output space. Please check
 				out these three papers
-				[<a href='papers.html#icdm2013'>ICDM2013</a>,
-					<a href='papers.html#dsaa2015b'>DSAA2015</a>,
-					<a href='papers.html#cikm2016a'>CIKM2016a</a>]
+				[<a href='publications.html#icdm2013'>ICDM2013</a>,
+					<a href='publications.html#dsaa2015b'>DSAA2015</a>,
+					<a href='publications.html#cikm2016a'>CIKM2016a</a>]
 				along with others
-				[<a href='papers.html#sdm2012'>SDM2012</a>,
-					<a href='papers.html#kdd2014'>KDD2014</a>,
-					<a href='papers.html#sdm2015b'>SDM2015b</a>].
+				[<a href='publications.html#sdm2012'>SDM2012</a>,
+					<a href='publications.html#kdd2014'>KDD2014</a>,
+					<a href='publications.html#sdm2015b'>SDM2015b</a>].
 				Along with Dr. Qi Li from Iowa State, we extended the framework to address fusion problem on sequential data found in natural language processing
-					[<a href='papers.html#icdm2021_c'>ICDM2021_c</a>].
+					[<a href='publications.html#icdm2021_c'>ICDM2021_c</a>].
 
 			</div>
 		</td>
@@ -207,9 +229,9 @@
 				to handle the large number of labels with varying importance, sparsity, and informativeness.
 				My current research tries to address the scalability challenges in many aspects
 				through the help of NLP, knowledgebases, and crowdsourcing. See
-				[<a href='papers.html#bigdata2016a'>BIGDATA2016a</a>
-					<a href='papers.html#cikm2016b'>CIKM2016b</a>
-					<a href='papers.html#sdm2016a'>SDM2016a</a>]
+				[<a href='publications.html#bigdata2016a'>BIGDATA2016a</a>
+					<a href='publications.html#cikm2016b'>CIKM2016b</a>
+					<a href='publications.html#sdm2016a'>SDM2016a</a>]
 				for the on-going research on the topic.
 			</div>
 		</td>
