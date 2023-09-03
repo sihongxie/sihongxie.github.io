@@ -33,14 +33,14 @@
 	<tbody>
 	<!-- all publications -->
 	<tr>
-		<td>
+		<td width=1%>
 		</td>
-		<td style="color:#595959; font-family=Palatino; font-size:12pt">
-			<div>
+		<td style="color:#595959; font-family=Palatino; font-size:12pt" width=69%>
+			<div class='area'>
 				Research Overview
 			</div>
 		</td>
-		<td>
+		<td width=30%>
 		</td>
 	</tr>
 	<tr>
@@ -57,6 +57,17 @@
 	</tr>
 	
 
+	<tr>
+		<td>
+		</td>
+			
+		<td class="center">
+			<br>
+			<img src="img/research-pic.png" class="center"  width='85%'>
+		</td>
+		<td>
+		</td>
+	</tr>
 	<!-- Area 0 -->
 	<tr>
 		<td>
@@ -81,7 +92,8 @@
 				a model's accuracy may drop due to slight perturbations;
 				or an accurate model can treat different demographical groups or individuals in an unfair way.
 				We aim to make the models more responsible by investigating explainability, fairness, and robustness beyond accuracy of the models.
-			       	(i) On large graphs, power-law degree distributions are common and can lead to fairness issues in the graphical models and affect end-users.
+				<b>	(i) </b>
+					On large graphs, power-law degree distributions are common and can lead to fairness issues in the graphical models and affect end-users.
 			        We propose a linear system to certificate if multiple desired fairness criteria can be fulfilled simultaneously, and if not,
 				a multi-objective optimization algorithm to find Pareto fronts for efficient trade-offs among the criteria 
 				[<a href='publications.html#cikm2021'>CIKM2021</a>]).
@@ -89,8 +101,9 @@
 				by exploiting the smoothness of the set of Pareto optima.
 				As graphs can contain hidden factors to complicate fairness issues,
 				we simultaneously learn a fair models and identify such hidden factors to mitigate the issues
-				[<a href='publications.html#kdd2023ws_2'>KDD2023</a>]),
-				(ii) Graphical models can be hard to understand by human users due to multiplexed information propagations over many edges.
+				[<a href='publications.html#kdd2023ws_2'>KDD2023</a>]).
+				<b>(ii)</b> 
+				Graphical models can be hard to understand by human users due to multiplexed information propagations over many edges.
 				The team published a series of works addressing challenges in making graphical models more interpretable,
 				such as
 				large discrete search space
@@ -98,11 +111,14 @@
 				axiomatic attribution
 				[<a href='publications.html#cikm2020'>CIKM2020</a>]),
 				multi-objective explanations
-				[<a href='publications.html#icdm2021_a'>ICDM2021a</a>]).
-				Lastly, robustness can be interpreted broadly as maintaining any desired properties under reasonably slight perturbations.
-				We study robustness of explanations through the tools of constrained optimization
-				[<a href='publications.html#icdm2021_b'>ICDM2021b</a>])
-				robust optimization, statistical theory, and optimization convergence analysis 
+				[<a href='publications.html#icdm2021_a'>ICDM2021a</a>]),
+				and differential geometric for interpretating nonlinear graph evolution 
+				[<a href='publications.html#iclr23'>ICLR2023</a>]).
+				<b>(iii)</b>
+				Robustness can be interpreted broadly as maintaining any desired properties under reasonably slight perturbations.
+				We provide robust explanations through self-supervision and constrained optimization
+				[<a href='publications.html#icdm2021_b'>ICDM2021b</a>]),
+				and robust optimization, statistical theory, and optimization convergence analysis 
 				[<a href='publications.html#icml2023ws'>ICML2023</a>])
 			</div>
 		</td>
@@ -110,6 +126,68 @@
 		</td>
 	</tr>
 
+	<!-- Area 2 -->
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='area'>
+			 	Data-Centric AI
+			</div>
+		</td>
+		<td>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		</td>
+		<td>
+			<div class='synopsis'>
+
+				Data-centric AI, in contrast to model-centric AI, studies challenges on the data consumed by AI models.
+				One example is the alignment algorithms used for fine-tuning LLM using human-annotated datasets,
+				where the cost of collecting high quality datasets becomes higher as models become larger;
+				as another example, training robots to navigate in a 3D world needs a large number of annotated 2D and 3D images.
+				We study three problems.
+				<b>(i)</b>
+				
+				Data quality can be improved by ensembling multiple sources.  
+				We target at fusing multiple human data annotators and/or predictive models,	
+				with <i>structured</i> output such as sets, rankings, and trees.
+				The challenges are to gauge the individual model's performance
+				and to take into account the extra knowledge of the output space.
+				Please check
+				out these three papers
+				[<a href='publications.html#icdm2013'>ICDM2013</a>,
+					<a href='publications.html#dsaa2015b'>DSAA2015</a>,
+					<a href='publications.html#cikm2016a'>CIKM2016a</a>]
+				along with others
+				[<a href='publications.html#sdm2012'>SDM2012</a>,
+					<a href='publications.html#kdd2014'>KDD2014</a>,
+					<a href='publications.html#sdm2015b'>SDM2015b</a>].
+				Along with Dr. Qi Li from Iowa State, we extended the framework to address fusion problem on sequential data found in natural language processing
+					[<a href='publications.html#icdm2021_c'>ICDM2021</a>].
+				
+				<b>(ii)</b>
+				To reduce annotation cost, we use reinforcement learning to explore the unlabeled data for active annotation.
+				Since finding an optimal data selection strategy needs labeled data, which do not exist before one start annotating, we adopt meta-bandit to learn an optimal strategy while annotating the data
+				[<a href='publications.html#cikm2020b'>CIKM2020</a>].
+				In certain cases, label spaces can be too large for annotation and selectively annotating data-label pairs can be useful 
+					[<a href='publications.html#cikm2016b'>CIKM2016b</a>,
+					<a href='publications.html#sdm2016a'>SDM2016a</a>].
+				Active annotations can be extended to structured data, such as sequential texts and general graphs (termed "structured annotations")
+					[<a href='publications.html#uai23'>UAI2023</a>].
+
+				<b>(iii)</b> Errors are ubiquitous in data-centric AI, and understanding how errors impact the whole pipeline of training AI model is important for correction and improve AI responsibility. We are using conformal prediction on graphical models to quantify uncertainty and its impact on the final models. 
+
+			</div>
+		</td>
+		<td>
+			<!--<img src="smiley.gif" alt="Smiley face" width="42" height="42"> -->
+		</td>
+	</tr>
+	
 	<!-- Area 1 -->
 	<tr>
 		<td>
@@ -126,8 +204,8 @@
 	<tr>
 		<td>
 		</td>
-		<td>
-			<div class='synopsis'>
+		<td width="69%">
+			<div class='synopsis' >
 				Online contents hosted on Twitter (now X), Yelp, Amazon, etc. are full of opinionated information that can significantly influence audience's decision making.
 				For example, during the COVID pandemic, information about vaccines can significantly influence the rate of vaccinations; dishonest entities have adopted unethical or even illegal strategies by paying spammers to post fake reviews (opinion spams) to promote or demote the targets businesses and producs.
 				Such activities lead to trust crisis of the online contents.
@@ -142,15 +220,17 @@
 				multi-source data
 				[<a href='publications.html#bigdata2016a'>BigData2016a</a>,
 				<a href='publications.html#bigdata2015'>BigData2015</a>,
-				<a href='publications.html#tdke2023'>tkde2023</a>
+				<a href='publications.html#tkde23'>TKDE2023</a>
 				]
 				Misinformation detectors are also constantly under attack of adversarial spammers in a changing environments and robust detectors
 				are critical
 				[<a href='publications.html#bigdata2018'>BigData2018</a>,
 				<a href='publications.html#kdd2020'>KDD 2020</a>].
-				Besides robustness, we study interpretable and fair detection.
-				[<a href='publications.html#'>BigData2018</a>,
-				<a href='publications.html#kdd2020'>KDD 2020</a>].
+				Besides robustness, we study interpretable and fair detection
+				[<a href='publications.html#bigdata2016a'>BIGDATA2016a</a>
+				[<a href='publications.html#ijcnn23'>IJCNN2023</a>]
+				[<a href='publications.html#kdd2023ws_2'>KDD2023</a>].
+				With the recent advance in LLM, our next target is studying how LLM can threat and/or help existing detection methods.
 			</div>
 		</td>
 		<td>
@@ -158,56 +238,13 @@
 		</td>
 	</tr>
 
-	<!-- Area 2 -->
-	<tr>
-		<td>
-		</td>
-		<td>
-			<div class='area'>
-				Ensemble and model fusion
-			</div>
-		</td>
-		<td>
-		</td>
-	</tr>
-	
-	<tr>
-		<td>
-		</td>
-		<td>
-			<div class='synopsis'>
-				An ensemble of multiple models, if fused properly, can provide more predictive power than any constituent model.
-				Traditional ensemble methods, with a long history, studied the fusion of a small number of predictive models for binary and multi-class prediction.
-				We move this field forward by targeting at fusing many unidentifiable predictive models,
-				such as crowdsourcing workers,
-				with sparse and structured output such as sets, rankings, and trees.
-				The challenges are to gauge the individual model's performance
-				and to take into account the extra knowledge of the output space. Please check
-				out these three papers
-				[<a href='publications.html#icdm2013'>ICDM2013</a>,
-					<a href='publications.html#dsaa2015b'>DSAA2015</a>,
-					<a href='publications.html#cikm2016a'>CIKM2016a</a>]
-				along with others
-				[<a href='publications.html#sdm2012'>SDM2012</a>,
-					<a href='publications.html#kdd2014'>KDD2014</a>,
-					<a href='publications.html#sdm2015b'>SDM2015b</a>].
-				Along with Dr. Qi Li from Iowa State, we extended the framework to address fusion problem on sequential data found in natural language processing
-					[<a href='publications.html#icdm2021_c'>ICDM2021_c</a>].
-
-			</div>
-		</td>
-		<td>
-			<!--<img src="smiley.gif" alt="Smiley face" width="42" height="42"> -->
-		</td>
-	</tr>
-	
 	<!-- Area 3 -->
-	<tr>
+	<!--<tr>
 		<td>
 		</td>
 		<td>
 			<div class='area'>
-				Extreme Multi-labeled Learning
+				Robotics
 			</div>
 		</td>
 		<td>
@@ -219,27 +256,15 @@
 		</td>
 		<td width="69%">
 			<div class='synopsis'>
-				Multi-labeled learning is a technique to assign more than one semantic concepts to a data item and has found wide applications in areas
-				such as bioinformatics, healthcare, e-commerce, and social media.
-				Big data have changed the landscape of multi-labeled learning by increasing the number of labels to an unprecedented scale.
-			       	For example, there are tens of thousands of tags (as labels) for texts
-				on Stackoverflow and Yahoo Answer, and
-				millions of tags for images on Flickr.
-				Extreme multi-labeled learning tries to scale up the traditional multi-labeled learning
-				to handle the large number of labels with varying importance, sparsity, and informativeness.
-				My current research tries to address the scalability challenges in many aspects
-				through the help of NLP, knowledgebases, and crowdsourcing. See
-				[<a href='publications.html#bigdata2016a'>BIGDATA2016a</a>
-					<a href='publications.html#cikm2016b'>CIKM2016b</a>
-					<a href='publications.html#sdm2016a'>SDM2016a</a>]
-				for the on-going research on the topic.
+				We aim for safe control, and more specifically, safe imitation learning on drones.
+				Example applications include active 3D mapping and localization in complex and dangerous environments such as steel factory and construction fields.
+
 			</div>
 		</td>
 		<td width="30%">
-			<!--<img src="smiley.gif" alt="Smiley face" width="42" height="42"> -->
 		</td>
 	</tr>
-	
+	-->
 	<!-- Area 4 -->
 	<tr>
 		<td>
