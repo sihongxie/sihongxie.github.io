@@ -1,0 +1,337 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 326/426: Foundation of Machine Learning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+<style>
+h1 {
+	font-size:20.5pt;
+	font-weight:bold;
+	color:#336666;
+}
+h2 {
+	font-size:16.0pt;
+	font-weight:bold;
+	color:#336666;
+}
+h3 {
+	font-size:12.0pt;
+}
+a:link {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+a:visited {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 1200px;
+	margin: auto;
+}
+td
+{
+	text-align:center;
+	border:1px solid black;
+	font-size:9.0 pt;
+}
+td.main
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+	text-align:left;
+	valign:top;
+	border:0px;
+}
+table
+{
+	border:1px solid black;
+	border-collapse: collapse;
+	width:"100%";
+}
+table.main
+{
+	border:0px;
+}
+.Title
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:16pt; 
+	font-weight:bold;
+	color:#FFFFFF;
+}
+.Lecturers
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12pt; 
+    font-weight:bold;
+    color:#FFFFFF;
+}
+a.buttons:visited {
+    color: white;
+    text-decoration: one;
+}
+a.buttons:link{
+    color: white;
+    text-decoration: none;
+}
+a.buttons:hover {
+    color: gray;
+}
+b { font-weight: bold; }
+
+.tab {
+	margin-left: 30px;
+    font-size:11pt; 
+}
+.item {
+    margin-left: 30px;
+    font-size:11pt; 
+}
+</style>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link=blue vlink=blue>
+<div class="navbar-fixed-top" style="top=0px;left=10px;background-color:rgb(77,51,1)">
+<table class=main cellpadding="0" style="margin-left:10px;margin-right:10px;margin-bottom:10px;margin-top:10px">
+  <tr>
+    <td class=main>
+      <p class="Title">
+            CS 326-010/426-011: Fundamentals of Machine Learning/Pattern Recognition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spring 2019
+      </p>
+      <p class="Lecturers">
+        Prof. Sihong Xie
+      </p>
+      <!--<a class="buttons" href="index.html"><b>Home</b></a> &nbsp;&nbsp;-->
+      <a class="buttons" href="#courseinfo"><b>Course Info</b></a> &nbsp;&nbsp;
+      <a href="#books" class="buttons"><b>Books</b></a> &nbsp; &nbsp;  
+        <a class="buttons" href="#schedule"><b>Schedule</b></a> &nbsp;&nbsp;
+      <a class="buttons" href="#projects"><b>Projects</b></a> &nbsp;&nbsp;
+      <a href="#datasets" class="buttons"><b>Datasets</b></a> &nbsp; &nbsp;
+      <!--<a class ="buttons" href="coursepolicy.html"><b>Course Policies</b></a> &nbsp;&nbsp;-->
+      <!--<a href=" https://www.coursera.org/learn/cs276" class="buttons"><b>Coursera</b></a> &nbsp;&nbsp;
+      <a href="https://piazza.com/stanford/spring2016/cs276/home" class="buttons"><b>Piazza</b></a> &nbsp;&nbsp;
+      <a href=" https://mvideox.stanford.edu/Course/706" class="buttons"><b>In-class lectures</b></a>-->
+	</td>
+  </tr>
+</table>
+<!--<hr align="center" size="2" width="100%">-->
+</div>
+
+<div class="hero-unit" width="10px">
+<p id="courseinfo"><br/><br/></p>
+<!--<p style="font-size:22pt;color:#336666">CS 398/498: Text Mining</p> -->
+
+<h2>Course Information</h2>
+<!--
+<p class='tab'><b>Syllabus </b> 
+<a href="syllabus.pdf">PDF</a></p>-->
+
+<p class='tab'><b>Description: </b>
+An introductory course offers a broad overview of the main techniques in machine learning. Students will study the theory, algorithms and implementations for machine learning. Topics covered include supervised learning (decision trees, naive Bayes and regression, boosting, SVM, perceptron), learning theory (bias/variance tradeoffs; PAC learning, and VC theory); probabilistic graphical model; unsupervised learning (dimensionality reduction, clustering, EM algorithms); deep neural networks and reinforcement learning.
+</p>
+
+<p class='tab'><b>Lectures:</b> Monday/Wednesday 8:45-10:00, Location: <a href='https://ltsfacilities.lehigh.edu/room/rauch-241'>Room 241,Rauch Business Center</a>. <br /></p>
+
+<p class='tab'><b>Office Hours: </b>  Sandbox in Packard Lab
+<ul>
+<li class='item'>
+Prof.Xie: Tuesday 10:00 pm - noon. <br/></p>
+<li class='item'>
+Jiaxin Liu: Tuesday/Thursday 4:10 pm-5:10 pm. <br/></p>
+</ul>
+
+<p class='tab'><b>Prerequisites:</b> <!-- Linear algebra (MATH 242 or 205), --> 
+For CSE 326: (CSE 002 or CSE 012) and (Math 205 or Math 43) and (Math 231 or ISE 121 or ECO 045).<br>
+We will use Python as the <b>only</b> language for implementation assignments.
+You can check <a href='https://www.cs.cmu.edu/~ninamf/courses/601sp15/hw/homework1.pdf'>this</a> out for a background assessment.
+</p>
+
+<p class='tab'><b>Formats:</b>
+1 take-home mid-term and 1 final exam, 7 homeworks, and 4 coding projects (with different levels of difficulty for 326/426).
+
+<p class='tab'><b>Submission:</b>
+All homeworks and projects must be submitted to Coursesite.
+Homeworks need to be in PDF format prepared by Word/Latex/Page, or scanning of your writtings.
+Latex is highly recommended and <a href="https://www.sharelatex.com/blog/latex-guides/beginners-tutorial.html">here</a>
+is a comprehensive (table, images, equations, paragraphs and sections) and yet short tutorial on Latex.
+Word and Page also support typing equations, but can be a bit awkward.
+
+<p class='tab'><b>Grading:</b>
+Mid-term (15%), homework (30%), coding projects (30%), final (25%).
+Late submissions will be penalized 20% of the total grades per late day (fraction of a day will be rounded up to one day)
+and no assignment will be accepted more than four days after its due date.
+
+<p id="books"></p>
+<br />
+<h2>Textbooks</h2>
+<p class='tab'><b>PRML</b>= <i>Pattern Recognition and Machine Learning</i>, Christopher M. Bishop, Springer, 2011 (required).
+</p>
+
+<p class='tab'><b>UML</b>= <i>Understanding Machine Learning: From Theory to Algorithms</i>, Shai Shalev-Shwartz and Shai Ben-David, 1st Edition, Cambridge University Press, 2014 (required).
+<a href="https://asa.lib.lehigh.edu/Record/10864875">eBook</a>.
+</p>
+
+<p class='tab'><b>ML</b>= <i>Machine Learning: A Probabilistic Perspective</i>, Kevin P. Murphy, MIT Press, 2012 (optional).
+<a href="https://asa.lib.lehigh.edu/Record/1398579">eBook</a>.
+</p>
+
+<p class='tab'><b>RL</b>= <i>Reinforcement Learning: An Introduction</i>, Richard S. Sutton and Andrew G. Barto, Second Edition, MIT Press, 2017 (optional).
+<a href="http://incompleteideas.net/book/the-book-2nd.html">eBook</a>.
+</p>
+
+<p id="online"></p>
+<br />
+<h2>Online Resources</h2>
+<p class='tab'>
+  <b>Coursesite: </b>
+  assignments and grades posting <a href="http://coursesite.lehigh.edu/"> Link</a>.
+</p>
+
+<p class='tab'>
+  <b>Piazza:</b>
+  question answering <a href="https://piazza.com/class/jo1x7ngflwe24h"> Link</a>.
+</p>
+
+<p class='tab'>
+  <b>This website: </b>
+  general course information.
+</p>
+
+
+<p id="schedule"></p>
+<br />
+<h2>Schedule </h2>
+<p align="center">
+
+<iframe width="1007" height="750"
+	src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQXdYeYgDIc0gL_6jc1WPfvhI-T6y8Y0xWyK4YTTmfHqi7iUd2r2hgCEsaUcQFHEPA4JsyaXmhqm2FI/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+	></iframe>
+
+
+<p id="projects"></p>
+<br />
+<h2>Projects </h2>
+<p class='tab'><b>Description: </b>
+There are four programming projects (3 individual projects and one team project).
+Each student needs to implement the projects using Python to get full credit.
+For individual projects, no machine learning packages (such as Tensorflow and Sklearn) will be allowed,
+although you can use more fundamental packages for plotting (matplotlib), data representations and operations (numpy, scipy, networkx).
+The focus here is sufficient deep understanding of the models and algorithms rather than experience running machine learning models.
+For group project, depending on the nature of the project, you may use off-the-shelf softwares to expedite your exploration (per permission of the instructor).
+
+Sharing and copying solutions are considered as a violation of honor code.
+This includes but not limited to sharing codes through any kind of media (including repositories on Github/Bitbucket),
+copying solutions from online forums/repositories/blogs,
+textbook solution manuals and previous years' submissions.
+</p>
+
+<ul> 
+<li class='item'>
+<b>Project 1</b>
+[Individual project]
+Implement logistic regression.
+</li>
+
+<li class='item'>
+<b>Project 2</b>
+[Individual project]
+Implement SVM in the primal and dual.
+</li>
+
+<li class='item'>
+<b>Project 3</b> 
+[Individual project]
+NN or RL related. Details TBD.
+</li>
+
+<li class='item'>
+<b>Project 4</b> 
+[Team project]
+<a href="final_project.pdf">Project Description</a>
+This project consists of understanding and implementing ideas from a classic machine learning paper with a certain level of sophistication.
+Example papers can be found in this suggested <a href="projects.html">project list</a>.
+Individual projects can't be repeated here, although a more advanced models based on those is fine (e.g., implementing a Beyesian logistic regression is considered different from Project 1).
+2-3 students can join one team (no single student can be in one team).
+The deliverables include a proposal, a progress check, a final report, data and codes with documentations.
+Each team member needs to specify his/her contribution to the project in the report.
+
+</li>
+</ul>
+</p>
+
+<p id="datasets"></p>
+<br/>
+<h2> Datasets</h2>
+<ul>
+<li>
+<a href="http://archive.ics.uci.edu/ml/datasets.html">UCI machine learning archive</a>.
+</li>
+<li>
+<a href="https://paperswithcode.com/sota">Paperswithcode</a>. The website collects the State-of-the-art (SOTA) papers on publicly available datasets.
+This is more modern than the UCI dataset.
+</li>
+<li>
+<a href="https://www.kaggle.com/">Kaggle</a>.
+The largest machine learning competition platform on earth.
+It has both small and big, old and modern datasets.
+</li>
+</ul>
+<br>
+
+<h2> Statement on Academic Integrity </h2>
+All homework, project and exam submissions should be your own work, by the following definitions:
+<ul>
+<li class='item'>
+You can discuss with your classmates about questions in the homeworks, but you should write the answers by your own.
+Helps received  from the Internet, tutors, classmates and teaching staffs should be acknowledged.
+</li>
+<li class='item'>
+Programming submissions should be your own codes and written documentations,
+although you can discuss with your classmates about the algorithms and datasets.
+Trivial modifications of others' codes will rarely evade our advanced detection techniques.
+Helps received from the Internet, tutors, classmates and teaching staffs should be acknowledged.
+If you read open-sourced codes and then write your own, you should note the sources in your project reports.
+</li>
+</ul>
+If you have doubt about where the line is, consult with the instructor for clarification.
+<br>
+
+<h2>The Principles of Our Equitable Community</h2>
+<p id="principles"></p>
+<ul>
+<li class='item'>
+<b>The Principles of Our Equitable Community:</b>  Lehigh University endorses The Principles of Our Equitable Community (www.lehigh.edu/diversity). We expect each member of this class to acknowledge and practice these Principles. Respect for each other and for differing viewpoints is a vital component of the learning environment inside and outside the classroom.
+</li>
+
+<li class='item'>
+<b>Accommodations for Students with Disabilities:</b> 
+Accommodations for Students with Disabilities: If you have a disability for which you are or may be requesting accommodations, please contact both your instructor and the Office of Academic Support Services, University Center C212 (610-758-4152) as early as possible in the semester.  You must have documentation from the Academic Support Services office before accommodations can be granted.
+</li>
+
+<li class='item'>
+<b>Lehigh University Policy on Harassment and Non-Discrimination</b>
+Lehigh University upholds The Principles of Our Equitable Community and is committed to providing an educational, working, co-curricular, social, and living environment for all students, staff, faculty, trustees, contract workers, and visitors that is free from harassment and discrimination on the basis of age, color, disability, gender identity or expression, genetic information, marital or familial status, national or ethnic origin, race, religion, sex, sexual orientation, or veteran status.  Such harassment or discrimination is unacceptable behavior and will not be tolerated. The University strongly encourages (and, depending upon the circumstances, may require) students, faculty, staff or visitors who experience or witness harassment or discrimination, or have information about harassment or discrimination in University programs or activities, to immediately report such conduct. 
+
+If you have questions about Lehigh’s Policy on Harassment and Non-Discrimination or need to report harassment or discrimination, contact the Equal Opportunity 
+Compliance Coordinator (Alumni Memorial Building / 610.758.3535 / eocc@lehigh.edu)
+</li>
+</ul>
+
+<!--
+<h2>Student bonus</h2>
+<p align="center">
+<iframe 
+	src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNgfIUPHG-Zt2ddBd7mzGxv_86LCZ2B8ejmi39WhnFDI3sWvbrJCkdaxNIbG8zW0E8oglh1BIl3j2_/pubhtml?widget=true&amp;headers=false"
+	></iframe>
+width="350" height="150"
+<hr align="center" size="2" width="100%">
+-->
+</div>
+</body>
+	
+</html>
