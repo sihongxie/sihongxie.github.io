@@ -1,0 +1,213 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 325/425: Natural Language Processing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+<style>
+h1 {
+	font-size:20.5pt;
+	font-weight:bold;
+	color:#336666;
+}
+h2 {
+	font-size:16.0pt;
+	font-weight:bold;
+	color:#336666;
+}
+h3 {
+	font-size:12.0pt;
+}
+a:link {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+a:visited {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 1200px;
+	margin: auto;
+}
+td
+{
+	text-align:center;
+	border:1px solid black;
+	font-size:9.0 pt;
+}
+td.main
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+	text-align:left;
+	valign:top;
+	border:0px;
+}
+table
+{
+	border:1px solid black;
+	border-collapse: collapse;
+	width:"100%";
+}
+table.main
+{
+	border:0px;
+}
+.Title
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:16pt; 
+	font-weight:bold;
+	color:#FFFFFF;
+}
+.Lecturers
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12pt; 
+    font-weight:bold;
+    color:#FFFFFF;
+}
+a.buttons:visited {
+    color: white;
+    text-decoration: one;
+}
+a.buttons:link{
+    color: white;
+    text-decoration: none;
+}
+a.buttons:hover {
+    color: gray;
+}
+b { font-weight: bold; }
+
+.tab {
+	margin-left: 30px;
+    font-size:11pt; 
+}
+.item {
+    margin-left: 30px;
+    font-size:11pt; 
+}
+</style>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link=blue vlink=blue>
+<div class="navbar-fixed-top" style="top=0px;left=10px;background-color:rgb(77,51,1)">
+</div>
+
+<div class="hero-unit" width="10px">
+
+<p id="projects"></p>
+<br />
+<h2>Suggested Projects </h2>
+<p class='tab'>
+</p>
+
+<h3>Module 1: Text Generation</h3>
+<p style="font-size:11pt; ">
+The sequence-to-sequence model can not only be used for POS-tagging, but also for text generation where machines generate sentences and documents, such as Tweets, Hacker News, image captions, Yelp reviews.
+For an open-sourced collection of text generators based on neural networks, see
+<a href="https://github.com/minimaxir/textgenrnn">TextGenRNN</a>.
+</p>
+<ul>
+
+<li class='item'>
+<b>Project 1</b> Product review generation.
+<br>
+Li Dong, Shaohan Huang, Furu Wei, Mirella Lapata, Ming Zhou and Ke Xu.
+<a href="http://www.aclweb.org/anthology/E17-1059">Learning to Generate Product Reviews from Attributes</a>, EACL, 2017.
+</li>
+
+<li class='item'>
+<b>Project 2</b> Multi-modal text generation: you will generate Reddit-like comments given a Reddit image.
+</li>
+
+</ul>
+</p>
+
+<h3>Module 2: Relation Extraction</h3>
+<p style="font-size:11pt; ">
+</p>
+<ul>
+<li class='item'>
+<b>Project 3</b> 
+<br>
+Daojian Zeng, Kang Liu, Yubo Chen, and Jun Zhao.
+<a href="http://www.emnlp2015.org/proceedings/EMNLP/pdf/EMNLP203.pdf">Distant Supervision for Relation Extraction via Piecewise Convolutional Neural Networks</a>, EMNLP, 2015.
+</li>
+
+<li class='item'>
+<b>Project 4</b> 
+<br>
+Dongxu Zhang and Dong Wang.
+<a href="https://arxiv.org/abs/1508.01006">Relation Classification via Recurrent Neural Network</a>, EMNLP, 2015.
+</li>
+
+<li class='item'>
+<b>Project 5</b> 
+<br>
+<a href="https://arxiv.org/abs/1805.09929">DSGAN: Generative Adversarial Training for Distant Supervision Relation Extraction</a>, ACL, 2018.
+</li>
+</ul>
+</p>
+
+<h3>Module 3: RNN</h3>
+<p style="font-size:11pt; ">
+</p>
+<ul>
+
+<li class='item'>
+<b>Project 6</b> An early paper on RNN for text generation.
+<br>
+Ilya Sutskever, James Martens, and Geoffrey Hinton.
+<a href="http://www.cs.utoronto.ca/~ilya/pubs/2011/LANG-RNN.pdf">Generating Text with Recurrent Neural Networks</a>, ICML, 2011.
+</li>
+
+<li class='item'>
+<b>Project 7</b> Empirical evaluation of RNN.
+<br>
+Rafal Jozefowicz, Wojciech Zaremba, and Ilya Sutskever.
+<a href="http://proceedings.mlr.press/v37/jozefowicz15.pdf">An Empirical Exploration of Recurrent Network Architectures</a>, ICML, 2015.
+</li>
+
+<li class='item'>
+<b>Project 8</b> 
+The first paper using adversarial learning for language generation.
+<br>
+Lantao Yu, Weinan Zhang, Jun Wang, and Yong Yu.
+<a href="https://arxiv.org/abs/1609.05473">SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient</a>, AAAI, 2017.
+</li>
+
+<li class='item'>
+<b>Project 9</b>
+Deal with the discrepancy between the generated texts during test time and the training texts.
+<br>
+Samy Bengio, Oriol Vinyals, Navdeep Jaitly, and Noam Shazeer.
+<a href="https://arxiv.org/abs/1506.03099">Scheduled Sampling for Sequence Prediction with Recurrent Neural Networks</a>, NeurIPS, 2015.
+</li>
+</ul>
+</p>
+
+<h3>Module 4: Image Captioning</h3>
+<p style="font-size:11pt; ">
+</p>
+<ul>
+
+<li class='item'>
+<b>Project 10</b> You will need to connect computer vision with NLP.
+<br>
+Tseng-Hung Chen, Yuan-Hong Liao, Ching-Yao Chuang, Wan-Ting Hsu, Jianlong Fu, and Min Sun
+<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Chen_Show_Adapt_and_ICCV_2017_paper.pdf">Show, Adapt and Tell: Adversarial Training of Cross-domain Image Captioner</a>, ICCV, 2017.
+</li>
+
+</ul>
+</p>
+
+</div>
+</body>
+	
+</html>

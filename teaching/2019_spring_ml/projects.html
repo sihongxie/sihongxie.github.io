@@ -1,0 +1,513 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 326/426: Machine learning projects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+<style>
+h1 {
+	font-size:20.5pt;
+	font-weight:bold;
+	color:#336666;
+}
+h2 {
+	font-size:16.0pt;
+	font-weight:bold;
+	color:#336666;
+}
+h3 {
+	font-size:12.0pt;
+}
+a:link {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+a:visited {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 1200px;
+	margin: auto;
+}
+td
+{
+	text-align:center;
+	border:1px solid black;
+	font-size:9.0 pt;
+}
+td.main
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+	text-align:left;
+	valign:top;
+	border:0px;
+}
+table
+{
+	border:1px solid black;
+	border-collapse: collapse;
+	width:"100%";
+}
+table.main
+{
+	border:0px;
+}
+.Title
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:16pt; 
+	font-weight:bold;
+	color:#FFFFFF;
+}
+.Lecturers
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12pt; 
+    font-weight:bold;
+    color:#FFFFFF;
+}
+a.buttons:visited {
+    color: white;
+    text-decoration: one;
+}
+a.buttons:link{
+    color: white;
+    text-decoration: none;
+}
+a.buttons:hover {
+    color: gray;
+}
+b { font-weight: bold; }
+
+.tab {
+	margin-left: 30px;
+    font-size:11pt; 
+}
+.item {
+    margin-left: 30px;
+    font-size:11pt; 
+}
+</style>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link=blue vlink=blue>
+<div class="navbar-fixed-top" style="top=0px;left=10px;background-color:rgb(77,51,1)">
+</div>
+
+<div class="hero-unit" width="10px">
+
+<p id="projects"></p>
+<br />
+<h2>Suggested Team Projects </h2>
+<p class='tab'>
+</p>
+
+<h3>Module 1: optimization</h3>
+<ul> 
+<li class='item'>
+<b>Project 1</b>
+[AdaGrad or Adam]
+We have learned gradient descent and its stochastic version in class, and now you will explore more advanced optimization algorithms
+for faster and more stable model training.
+You can choose one of the following:
+<br>
+John Duchi, Elad Hazan and Yoram Singer, <a href="http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf">Adaptive Subgradient Methods for Online Learning and Stochastic Optimization</a>, JMLR, 2011.
+Diederik P. Kingma, Jimmy Ba, <a href="https://arxiv.org/abs/1412.6980">Adam: A Method for Stochastic Optimization</a>. ICLR, 2015.
+<br>
+</li>
+
+<li class='item'>
+<b>Project 2</b>
+[Asynchronous distributed optimization algorithms]
+In our class, we learned how to solve a model by updating all parameters at the same time,
+based on the most updated values of all parameters.
+The gradient is available only after all parameters are updated in the last iteration.
+Can we update parameters using out-of-date values to beat this bottleneck?
+In this project, you will explore the power of asynchorous distributed optimization for large-scale optimization.
+<br>
+Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Timothy P. Lillicrap, Tim Harley, David Silver, Koray Kavukcuoglu. <a href="http://proceedings.mlr.press/v48/mniha16.pdf"> Asynchronous Methods for Deep Reinforcement Learning </a>, ICML, 2016.
+<br>
+B. Recht, C. Re, S. Wright, and F. Niu. <a href="https://people.eecs.berkeley.edu/~brecht/papers/hogwildTR.pdf">Hogwild: A lockfree approach to parallelizing stochastic gradient descent</a>. NIPS, 2011.
+<br>
+A. Agarwal and J. C. Duchi. <a href="https://arxiv.org/abs/1104.5525">Distributed delayed stochastic optimization</a>. NIPS, 2011.
+<br>
+H. R. Feyzmahdavian, A. Aytekin, and M. Johansson. <a href="https://arxiv.org/abs/1505.04824">An asynchronous mini-batch algorithm for regularized stochastic optimization</a>. IEEE Transactions on Automatic Control, 2016.
+<br>
+T. Paine, H. Jin, J. Yang, Z. Lin, and T. Huang. <a href="https://arxiv.org/abs/1312.6186">GPU asynchronous stochastic gradient descent to speed up neural network training</a>. 2013.
+</li>
+
+<li class='item'>
+<b>Project 3</b>
+[Dual decomposition for graphical model inference] We learned how to use message passing and sampling for graphical model inference.
+The third alternative is to adopt an optimization-based approach.
+We ask you to develop a distributed algorithm called dual decomposition that solves optimization problems that is a sum of objective functions sharing optimization variables.
+You need to be familiar with the basic duality theory in optimization (but not very deep, if you can deal with SVM, you can deal with this paper).
+<br>
+David Sontag, Amir Globerson and Tommi Jaakkola. <a href="https://people.csail.mit.edu/dsontag/papers/SonGloJaa_optbook.pdf">Introduction to Dual Decomposition for Inference</a>.
+</li>
+
+<li class='item'>
+<b>Project X</b>
+[Convex optimization and learning theory]
+This paper connects optimization to bias and variance balancing.
+<br>
+Hongseok Namkoong, John C. Duchi.
+<a href="http://papers.nips.cc/paper/6890-variance-based-regularization-with-convex-objectives">
+	Variance-based Regularization with Convex Objectives
+</a>.
+</li>
+
+<li class='item'>
+<b>Project X</b>
+[No local minima for matrix completion]
+Matrix completion is widely used in collaborative filtering for recommendation system (Netflix).
+It is not clear whether the formulated optimization problem is convex or not, and thus whether local minima are also global ones.
+This paper tries to answer this question.
+<br>
+Rong Ge, Jason D. Lee, Tengyu Ma.
+<a href="http://papers.nips.cc/paper/6048-matrix-completion-has-no-spurious-local-minimum">
+	Matrix Completion has No Spurious Local Minimum
+</a>.
+</li>
+
+</ul>
+
+<h3>Module 2: graphical models</h3>
+<ul> 
+<li class='item'>
+<b>Project 4</b>
+[Collective inference for network classification]
+You probably have heard of fake news on Facebook, but  
+you may have not realized that there are large number of fake reviews on Amazon and Yelp.
+The following papers applied Markov Random Fields and message passing to find suspicious accounts contents on social networks and review websites.<br>
+J. Jia, B. Wang, L. Zhang, and N. Z. Gong, <a href="http://papers.www2017.com.au.s3-website-ap-southeast-2.amazonaws.com/proceedings/p1561.pdf">AttriInfer: Inferring user attributes in online social networks using markov random fields</a>, in WWW, 2017.<br>
+Binghui Wang, Neil Zhenqiang Gong, Hao Fu, <a href="ieeexplore.ieee.org/document/8215519/">GANG: Detecting Fraudulent Users in Online Social Networks via Guilt-by-Association on Directed Graphs</a>, in ICDM, 2017.
+<br>
+Shebuti Rayana and Leman Akoglu, <a href="http://shebuti.com/wp-content/uploads/2016/06/15-kdd-collectiveopinionspam.pdf">Collective Opinion Spam Detection: Bridging Review Networks and Metadata</a>, KDD, 2015
+</li>
+
+<li class='item'>
+<b>Project 5</b>
+[Belief propagation on GPU]
+The vanilla belief propagation algorithm is sequential in nature: you loop through the edges of a graph and compute the messages one-by-one until convergence.
+One may not want to wait for a long time for the convergence, especially during human-machine interactions.
+To exploit multi-core on GPU to speed up inference, non-trivial re-formulation of belief propagation is needed.
+This paper presents an elegant re-formulation using sparse matrix multipilcation to compute belief propagation.
+<br>
+Reid M. Bixler, <a href="http://shebuti.com/wp-content/uploads/2016/06/15-kdd-collectiveopinionspam.pdf">Sparse Matrix Belief Propagation.</a>, Master Thesis, Virginia Tech. 2018
+</li>
+
+<li class='item'>
+<b>Project 6</b>
+[Graphical models for multi-instance learning]
+You are asked to apply directed graphical models to a natural language processing problem called "relation extraction".
+You will be given bags of text of snippets, with each bag representing a pair of words where a relation needs to be predicted for the two words contained in the text snippet.
+<br>
+Mihai Surdeanu, Julie Tibshirani, Ramesh Nallapati, Christopher D. Manning. <a href="https://nlp.stanford.edu/pubs/emnlp2012-mimlre.pdf">Multi-instance Multi-label Learning for Relation Extraction</a>, EMNLP, 2012.
+</li>
+
+<li class='item'>
+<b>Project 7</b>
+[Monte Carlo sampling for topic models]
+We have learned graphical model and several inference algorithms.
+Here we ask you to apply a Gibbs sampler to learn topics of text documents in an unsupervised way.
+Implementation is not that hard, but understanding the model require sophisticated manipulation of exponential families.
+<br>
+Thomas L. Griffiths and Mark Steyvers. <a href="https://www.pnas.org/content/101/suppl_1/5228">Finding scientific topics</a>. PNAS April 6, 2004 101 (suppl 1) 5228-5235.
+</li>
+
+</ul>
+
+<h3>Module 3: Deep learning</h3>
+<ul> 
+<li class='item'>
+<b>Project 8</b>
+[Explainable RNN as information extraction]
+Predictions from texts, such as sentiment expressed by the texts, are usually numeric, while the rationales behind the predictions can be hard to figure out.
+This project asks you to implement RNN,
+a deep learning model called "Rurrent Neural Network" (not covered in depth in our lecture),
+that can explain to the user what text snippets lead to the predictions.
+GPUs are available in Sandbox at your disposal and you can use Tensorflow/PyTorch for your experiments.
+<br>
+Tao Lei, Regina Barzilay and Tommi Jaakkola. <a href="http://www.anthology.aclweb.org/D/D16/D16-1011.pdf">Rationalizing Neural Predictions</a>, EMNLP, 2016.
+</li>
+
+<li class='item'>
+<b>Project 9</b>
+[Text generation using RNN]
+You can use machine learning model to generate realistic natural language.
+Here we ask you to apply RNN 
+to generate reviews for products on Amazon.
+Dataset will be provided and you can use existing source codes online, but you're required to deliver substantial experiments.
+GPUs are available in Sandbox at your disposal and you can use Tensorflow/PyTorch for your experiments.
+<br>
+Ilya Sutskever, James Martens, and Geoffrey Hinton. <a href="http://www.cs.utoronto.ca/~ilya/pubs/2011/LANG-RNN.pdf">Generating Text with Recurrent Neural Networks</a>, ICML, 2011.
+<br>
+Li Dong, Shaohan Huang, Furu Wei, Mirella Lapata, Ming Zhou and Ke Xu.
+<a href="http://www.aclweb.org/anthology/E17-1059">Learning to Generate Product Reviews from Attributes</a>, EACL, 2017.
+</li>
+
+<li class='item'>
+<b>Project 10</b>
+[Deep Q-Learning for continuous action space] You have implemented a simple Q-learning algorithm using MLP, with discrete action spaces.
+In robotics, the action space can be continuous, and we asked you to go deeper and implement an actor-critic algorithm
+with continuous action space.
+
+<br>
+Timothy P. Lillicrap, Jonathan J. Hunt, Alexander Pritzel, Nicolas Heess, Tom Erez, Yuval Tassa, David Silver and Daan Wierstra. <a href="">Continuous control with deep reinforcement learning</a>, ICLR, 2016.
+</li>
+
+<li class='item'>
+<b>Project 11</b>
+[Deep Q-Learning for video game playing] This <href a='https://www.youtube.com/watch?v=gCJyVX98KJ4'>video</a> explains pretty much of the implementation, but you have to do it by yourselves. 
+
+<br>
+See this github <a href='https://github.com/simoninithomas/Deep_reinforcement_learning_Course'>repo</a> for more information.
+</li>
+
+<li class='item'>
+<b>Project 12</b>
+[Variational autoencoder] Autoencoder can be formulated using a Bayesian framework and optimized using variational inference.
+This work will allow you to extend your knowledge in neural network, graphical model and optimization by seeing how they are combined to tackle a deep learning model.
+<br>
+Diederik P. Kingma, Max Welling. <a href="http://arxiv.org/abs/1312.6114">Auto-Encoding Variational Bayes</a>, ICLR, 2014.
+</li>
+
+</ul>
+
+<h3>Module 4: Dimension reduction </h3>
+<ul> 
+<li class='item'>
+<b>Project 13</b>
+[EM algorithm for probabilistic PCA] An EM algorithm is proposed to find parameters of the probabilistic PCA model.
+It allows you to estimate parameters using streaming data rather than computing eigenvectors of a large covariance matrix,
+and is thus more computational efficient than eigen-decomposition.
+<br>
+Sam Roweis, <a href="">EM algorithms for PCA and SPCA</a>, in NIPS 1998
+</li>
+
+<li class='item'>
+<b>Project 14</b>
+[MLE for probabilistic PCA] An MLE algorithm is proposed to find parameters of the probabilistic PCA model.
+Same as traditional PCA, this algorithm needs to compute eigenvectors of a covariance matrix, which can be large.
+The project is for you to learn another formulation that also leads to eigen-decomposition.
+<br>
+Tipping, M. E. and C. M. Bishop (1999b). <a href="https://www.jstor.org/stable/2680726">Probabilistic principal component analysis</a>. Journal of the Royal Statistical Society, Series B 21(3), 611–622.
+</li>
+
+<li class='item'>
+<b>Project 15</b>
+[Kernel PCA] Traditional PCA, including probabilistic PCA, are linear.
+Kernels can be introduced into PCA to handle non-linearity in the data, pretty much like SVM, although we are dealing with unsupervised learning.
+<br>
+Scholkopf, B., A. Smola, and K.-R. Muller (1998). <a href="https://www.mitpressjournals.org/doi/pdf/10.1162/089976698300017467">Nonlinear component analysis as a kernel eigenvalue problem</a>. Neural Computation 10(5), 1299–1319.
+</li>
+
+<li class='item'>
+<b>Project 16</b>
+[Kernel CCA] Canonical correlation analysis tries to reduce dimensionality of data that have two modalities.
+For example, to classify webpages that can contain both texts (first modality) and images (the second modality),
+you can use CCA to merge the two modalities into a shared latent space, where classification can tap on information from both modalities.
+<br>
+Hardoon, David R., Szedmak, Sandor R., and Shawe Taylor, John R. <a href="https://ieeexplore.ieee.org/document/6788402">Canonical correlation analysis: An overview with application to learning methods</a>. Neural Computation, 16:2639–2664, 2004.
+</li>
+
+<li class='item'>
+<b>Project 17</b>
+[Interpretable matrix factorization] The basis and representation vectors produced by PCA are not interpretable: what does the entries in these vectors mean?
+The interpretability of the outcome is important for humans who use the results.
+CUR matrix factorization uses vectors in the data matrix as "bases" to represent the whole dataset, so that the vectors has the same
+meaning as the input vectors.
+<br>
+Michael W. Mahoney and Petros Drineas <a href="https://www.pnas.org/content/106/3/697">CUR matrix decompositions for improved data analysis</a>. PNAS January 20, 2009 106 (3) 697-702.
+</li>
+</ul>
+
+<h3>Module 5: Clustering</h3>
+<ul> 
+<li class='item'>
+<b>Project 18</b>
+[Information theoretical clustering] A clustering problem can be formulated using information theory.
+The idea is to treat the latent clustering variables as a bridge connecting the observed data vectors and the identifiers of the data.
+EM algorithm can be used to solve the resulting optimization problem.
+<br>
+Tishby, N., Pereira, F. and Bialek, W. (1999), <a href="https://arxiv.org/abs/physics/0004057">The information bottleneck method</a>, in The 37’th Allerton conference on communication, control, and computing.
+</li>
+
+<li class='item'>
+<b>Project 19</b>
+[Spectral clustering] k-means assumes that the input data are in a form of vectors.
+However, many datasets have relation between data items (represented by a graph), for example, a social network of persons.
+Even the vectorial data can be transformed to a graph.
+Spectral clustering is a clustering algorithm that partitions a graph into regions as clusters.
+<br>
+Von Luxburg, U. (2007), <a href="https://arxiv.org/abs/0711.0189">A tutorial on spectral clustering</a>, Statistics and Computing, 17(4), 395–416.
+</li>
+</ul>
+
+<h3>Module 6: Classification and Regression</h3>
+<ul> 
+<li class='item'>
+<b>Project 20</b>
+[Multi-class SVM] The SVM we studied is for binary classification. What if your data have more than two classes (called "Multi-class classification")?
+SVM can be re-formulated to deal with multi-class problems.
+<br>
+Crammer, K. and Singer, Y. (2001), <a href="jmlr.csail.mit.edu/papers/volume2/crammer01a/crammer01a.pdf">On the algorithmic implementation of multi-class kernel-based vector machines</a>, Journal of Machine Learning Research 2, 265–292.
+</li>
+
+<li class='item'>
+<b>Project X</b>
+Optimizing SVM through sub-gradient.
+<br>
+Shai Shalev-Shwartz, Yoram Singer, and Nathan Srebro.
+<a href="http://ttic.uchicago.edu/~nati/Publications/PegasosMPB.pdf">
+	Pegasos: Primal estimated sub-gradient solver for SVM
+</a>
+</li>
+
+<li class='item'>
+<b>Project 21</b>
+[Multi-task Classification] The problem studies how to use the same set of features to produce multiple output for multiple prediction tasks. 
+For example, you can use the same Facebook user profile to predict the sex, age and music preference at the same time.
+<br>
+Argyriou, A., Evgeniou, T., and Pontil, M. <a href="http://ttic.uchicago.edu/~argyriou/papers/mtl_feat.pdf">Convex multi-task feature learning</a>. Machine Learning, 73
+(3):243–272, 2008.
+</li>
+
+<li class='item'>
+<b>Project 22</b>
+[Ranking] Wondering how Facebook or Twitter recommend friends to you? This can be solved by ranking all Facebook/Twitter users based on your interest into them.
+Regression models can be adapted to ranking, but there are more specific models, algorithms and metrics for ranking problems.
+The following paper uses an SVM-style algorithm to optimize a ranking metric called NDCG.
+<br>
+Chapelle, O., Le, Q. and Smola, A. (2007), <a href="http://t.search.lores.eu/library/Large%20margin%20optimization%20of%20ranking%20measures.pdf">Large margin optimization of ranking measures</a>, in NIPS workshop: Machine learning for Web search (Machine Learning).
+</li>
+</ul>
+
+<h3>Module 7: Learning Theory </h3>
+<ul> 
+<li class='item'>
+<b>Project 23</b>
+[Why using Entropy in Decision Tree Learning] There is a proof that entropy can encourage a boosting-like advantage when learning a tree using C4.5 or ID3. 
+<br>
+Michael Kearns and Y. Mansour. 
+On the Boosting Ability of Top-Down Decision Tree Learning Algorithms. 
+<a href="http://www.cis.upenn.edu/~mkearns/papers/topdown.pdf">On the algorithmic implementation of multi-class kernel-based vector machines</a>, Journal of Computer and Systems Sciences, 58(1), 1999, pages 109-128. Earlier version in Proceedings of the 28th ACM Symposium on the Theory of Computing, pp.459-468, 1996, ACM Press.
+</li>
+
+</ul>
+
+
+<h3>Module 8: Combining models</h3>
+<ul> 
+<li class='item'>
+<b>Project 24</b>
+Bayesian optimization (BayesOpt) is now widely used in tuning deep network hyperparameters,
+and this paper finds BayesOpt useful for combining multiple classification models too.
+<br>
+Julien-Charles Levesque, Christian Gagne and Robert Sabourin.
+<a href="http://auai.org/uai2016/proceedings/papers/73.pdf">Bayesian Hyperparameter Optimization for Ensemble Learning</a>, UAI'16 Proceedings of the Thirty-Second Conference on Uncertainty in Artificial Intelligence.
+</li>
+
+<li class='item'>
+<b>Project 25</b>
+Use graphical model with variational optimization to find best way to combine decisions made by multiple classification models.
+<br>
+Qiang Liu, Jian Peng, Alexander T. Ihler.
+<a href="http://auai.org/uai2016/proceedings/papers/73.pdf">Variational Inference for Crowdsourcing</a>,
+Advances in Neural Information Processing Systems 25 (NIPS 2012).
+</li>
+</ul>
+
+<h3>Module 9: FAT (Fair, Accountable, and Transparent) Machine Learning</h3>
+More papers can be found <a href="http://www.fatml.org">here</a>.
+<ul> 
+<li class='item'>
+<b>Project 26</b>
+How to explain why a classification model fails in security-critical application?
+This paper explore the answers with deep models.
+<br>
+Wenbo Guo, Dongliang Mu, Jun Xu, Purui Su, Gang Wang, and Xinyu Xing.
+<a href="http://people.cs.vt.edu/~gangwang/ccs18.pdf">
+	LEMNA: Explaining Deep Learning based Security Applications
+</a>,
+CCS ’18
+</li>
+
+<li class='item'>
+
+<b>Project 27</b>
+What do you mean when a probabilistic classifier is fair? Is it possile to guarantee fairness?
+This theoretical paper formally define the conditions of fairness and show that it is impossible to satisfy all of them simultaneously.
+<br>
+<a href="https://arxiv.org/pdf/1609.05807.pdf">
+	Inherent Trade-Offs in the Fair Determination of Risk Scores
+</a>
+</li>
+
+<li class='item'>
+
+<b>Project 28</b>
+Machine learning is designed to work with humans.
+Decisions made by a model will be used downstream by human decision makers, who may have inherent bias.
+This paper designed a learning model that can interact with humans while taking into account the the bias.
+<br>
+David Madras, Toni Pitassi, and Richard Zemel.
+<a href="http://papers.nips.cc/paper/7853-predict-responsibly-improving-fairness-and-accuracy-by-learning-to-defer">
+	Predict Responsibly: Improving Fairness and Accuracy by Learning to Defer
+</a>
+</li>
+
+<li class='item'>
+<b>Project X</b>
+Explaining linear models through influence matrix.
+<br>
+Pang Wei Koh, Percy Liang
+<a href="https://arxiv.org/abs/1703.04730">
+	Understanding Black-box Predictions via Influence Functions
+</a>
+</li>
+
+<li class='item'>
+<b>Project X</b>
+<br>
+Tatsunori Hashimoto, Megha Srivastava, Hongseok Namkoong, Percy Liang
+<a href="https://arxiv.org/abs/1806.08010">
+	Fairness Without Demographics in Repeated Loss Minimization
+</a>
+</li>
+
+<li class='item'>
+<b>Project X</b>
+<br>
+Lydia Liu, Sarah Dean, Esther Rolf, Max Simchowitz, Moritz Hardt
+<a href="https://arxiv.org/abs/1803.04383">
+	Delayed Impact of Fair Machine Learning
+</a>
+</li>
+
+<li class='item'>
+<b>Project X</b>
+<br>
+Anish Athalye, Nicholas Carlini, David Wagner
+<a href="https://arxiv.org/abs/1802.00420">
+Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples
+</a>
+</li>
+
+
+</ul>
+
+
+
+</p>
+
+</div>
+</body>
+	
+</html>

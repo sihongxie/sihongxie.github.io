@@ -1,0 +1,655 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 398/498: Text Mining</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+<style>
+h1 {
+	font-size:20.5pt;
+	font-weight:bold;
+	color:#336666;
+}
+h2 {
+	font-size:16.0pt;
+	font-weight:bold;
+	color:#336666;
+}
+h3 {
+	font-size:12.0pt;
+}
+a:link {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+a:visited {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif
+}
+td
+{
+	text-align:center;
+	border:1px solid black;
+	font-size:9.0 pt;
+}
+td.main
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+	text-align:left;
+	valign:top;
+	border:0px;
+}
+table
+{
+	border:1px solid black;
+	border-collapse: collapse;
+	width:"100%";
+}
+table.main
+{
+	border:0px;
+}
+.Title
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:16pt; 
+	font-weight:bold;
+	color:#FFFFFF;
+}
+.Lecturers
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12pt; 
+    font-weight:bold;
+    color:#FFFFFF;
+}
+a.buttons:visited {
+    color: white;
+    text-decoration: one;
+}
+a.buttons:link{
+    color: white;
+    text-decoration: none;
+}
+a.buttons:hover {
+    color: gray;
+}
+b { font-weight: bold; }
+</style>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link=blue vlink=blue>
+<div class="navbar-fixed-top" style="top=0px;left=10px;background-color:rgb(77,51,1)">
+<table class=main cellpadding="0" style="margin-left:10px;margin-right:10px;margin-bottom:10px;margin-top:10px">
+  <tr>
+      <!--
+    <td class=main width=105><p><img width=112 height=112 src="images/SU_Seal_Card_pos_small.gif" alt="Stanford University"></p></td>
+       -->
+    <td class=main>
+      <p class="Title">
+            CS 398/498: Text Mining &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fall 2016
+      </p>
+      <p class="Lecturers">
+        Prof. Sihong Xie
+      </p>
+      <!--<a class="buttons" href="index.html"><b>Home</b></a> &nbsp;&nbsp;-->
+      <a class="buttons" href="#courseinfo"><b>Course Info</b></a> &nbsp;&nbsp;
+      <a href="#books" class="buttons"><b>Books</b></a> &nbsp; &nbsp;  
+        <a class="buttons" href="#schedule"><b>Schedule</b></a> &nbsp;&nbsp;
+      <a class="buttons" href="#projects"><b>Projects</b></a> &nbsp;&nbsp;
+      <a href="#datasets" class="buttons"><b>Datasets</b></a> &nbsp; &nbsp;  
+      <!--<a class ="buttons" href="coursepolicy.html"><b>Course Policies</b></a> &nbsp;&nbsp;-->
+      <!--<a href=" https://www.coursera.org/learn/cs276" class="buttons"><b>Coursera</b></a> &nbsp;&nbsp;
+      <a href="https://piazza.com/stanford/spring2016/cs276/home" class="buttons"><b>Piazza</b></a> &nbsp;&nbsp;
+      <a href=" https://mvideox.stanford.edu/Course/706" class="buttons"><b>In-class lectures</b></a>-->
+	</td>
+  </tr>
+</table>
+<!--<hr align="center" size="2" width="100%">-->
+</div>
+
+<div class="hero-unit">
+<p id="courseinfo"><br/><br/></p>
+<!--<p style="font-size:22pt;color:#336666">CS 398/498: Text Mining</p> -->
+
+<h2>Course Information</h2>
+
+<p><b>Syllabus </b> <a href="syllabus_text_mining.pdf">PDF</a></p>
+
+<p><b>Description: </b> This course introduces the students to the data, algorithms, models and tools in modern text analytics, through
+lectures, course projects and presentations. Topics covered includes text representation, classification, clustering, core natural language processing,
+sentiment and opinion analysis, neural network based approaches, trustworthiness issues, data integration, crowdsourcing and collective intelligence.
+Only minimal knowledge of probability, statistics and programming is necessary to attend this course.
+</p>
+
+<p><b>Lectures:</b> Tuesday/Thursday 1:10-2:25 at Packard Lab 258<br /></p>
+
+<p><b>Office Hours: </b>Thursday 4:30pm - 6:30 pm, Packard Lab 329 <br/></p>
+
+<p><b>Prerequisites:</b> <!-- Linear algebra (MATH 242 or 205), --> 
+For CSE 398: (MATH 231 or ECO 045) and (CSE017), for CSE 498 instructor permission is required.<br>
+We will mainly use Python for demonstration purpose,
+although any programming languages can be used for projects.
+Python is quite readable and intuitive, and you shall be able to learn it quickly if you've done Java or C++.
+Three lectures will be devoted to the core programming and math tools at the beginning.
+</p>
+
+<p><b>Formats:</b>
+1 closed-book mid-term, 2 projects (see more details at the end of this page), open-book in-class quizzes, presentations.
+
+<p><b>Grading:</b>
+Mid-term 25%, 
+project 1 15%, project 2 50% (proposal 10%, presentation 10%, deliverables 30%),
+in-class quizzes 10%.
+Late submissions will be penalized 20% of the total grades per late day (24 hours or part thereof) after due date.
+No assignment will be accepted more than four days after its due date.
+
+<!--
+<p>
+  <b>TAs: </b> Panupong Pasupat (<b>Head TA</b>), Pujun Bhatnagar, Jade Huang, Jiang Han, Shubham Gupta, Nihit Desai
+</p>
+-->
+<!--<p>For a detailed schedule, check out the Google calendar using the link
+<a href= " https://www.google.com/calendar/embed?src=u1cjiug7hslnp9nekkc213delc%40group.calendar.google.com">here</a>.</p>
+<p><strong>Daytime Office Hours</strong></p>
+<ul>
+  
+  <li><strong>Monday: </strong>Room: Gates B24, Time: 9:30 am - 10:30 am</li>
+  <li><strong>Monday: </strong>Room: Gates B24, Time:  2:00 pm - 3:00 pm</li>
+  <li><strong>Wednesday: </strong>Room: Gates B24, Time: 11:00 am - 12:00 pm</li>
+  <li><strong>Friday: </strong>Room: Gates B24, Time:  1:00 pm - 2:00 pm</li>
+  
+</ul>
+<p><strong>Evening Code Sessions</strong></p>
+<ul>
+  
+  <li><strong>Tuesday: </strong>Room: 160-318 (Wallenberg Hall, Main Quad), Time: 7:00 pm - 10:00 pm </li>
+  <li><strong>Wednesday: </strong>Room: 160-318 (Wallenberg Hall, Main Quad), Time: 6:00 pm - 9:00 pm</li>
+  
+</ul>
+For the most part, the weekly schedule below is fixed. However, occasionally there might be changes to schedule given above. Please check <a href="https://calendar.google.com/calendar/embed?src=3in636i4ltc1re4143sr1e8lns%40group.calendar.google.com">this calendar</a> before visiting office hours. We will try to avoid last minute changes and will make a Piazza announcement if necessary. For SCPD students, we will be available via Google hangout. Hangout link will be posted on Piazza.
+-->
+
+<p id="books"></p>
+<h2>Textbooks</h2>
+<p>This course will use contents from various books that are <b>freely</b> available online or through Lehigh library.</p>
+
+<h3>Required</h3>
+<p>The students are encouraged to read the required materials listed in the schedule section before attending class.
+Problems in exams and quizzes will be based on the required readings.</p>
+
+<p><b>IIR</b> = <i>Introduction to Information Retrieval</i>, by C. Manning, P. Raghavan,
+and H. Schütze. Cambridge University Press, 2008.
+ <a href="http://nlp.stanford.edu/IR-book/">Download</a>. 
+</p>
+
+<p><b>SAOM</b>= <i>Sentiment Analysis and Opinion Mining</i>, by Bing Liu. Morgan & Claypool Publishers, May 2012.
+    <a href="https://www.cs.uic.edu/~liub/FBS/SentimentAnalysis-and-OpinionMining.pdf">Download</a>.
+</p>
+
+<p><b>FSNLP</b>= <i>Foundations of statistical natural language processing</i>, by Manning, Christopher D., Schütze, Hinrich. Cambridge, Mass.: MIT Press, 2000.
+Paper book available at Linderman Reserve and <a href="https://asa.lib.lehigh.edu/Record/10680488">Ebook available to Lehigh users.</a>.
+</p>
+
+<h3>Supplementary</h3>
+<p>These are excellent materials for you to get alternative viewpoints and more details of the materials covered in the lectures.
+You are NOT required to read them and they will NOT be in your exams or quizzes.</p>
+
+<p><b>NLPP</b>= <i>Natural Language Processing with Python</i>, by Bird, Steven, Edward Loper and Ewan Klein. O’Reilly Media Inc, 2009.
+<a href="http://www.nltk.org/book/">Link</a> (<i>NLP algorithms implemented off-the-shelf</i>).
+</p>
+
+<p><b>SLP3</b>= <i>Speech and Language Processing</i>, by Daniel Jurafsky, James H. Martin. Copyright c 2015. All rights reserved. Draft of June 26, 2015.
+<a href="http://web.stanford.edu/~jurafsky/slp3/">Link</a>.
+</p>
+
+<p><b>SA </b>= <i>Sentiment Analysis: mining opinions, sentiments, and emotions</i>, by Bing Liu. Cambridge University Press, 2015.
+(<i>The most current book on the topic, though you need to purchase it. We will use SAOM as the major source</i>).
+</p>
+
+<p>
+    <b>TDA</b> = <i>Twitter Data Analytics</i>, by Kumar, Shamanth, Morstatter, Fred, and Huan Liu. Twitter Data Analytics. Springer, 2013.
+    <a href="http://tweettracker.fulton.asu.edu/tda/">Download</a> (<i>Mining texts and social network data on Twitter, with codes</i>).
+</p>
+
+<p><b>PRML</b>= <i>Pattern Recognition and Machine Learning </i>, by Bishop, Christopher M., Springer, 2006.
+<a href="https://library.lehigh.edu/asa2.0/Record/1019151">Available to Lehigh users</a>
+(<i>Good source for basic machine learning algorithms like classification, clustering, probabilistic models, with a Bayesian flavor. Recommended only for 
+advanced readers</i>).
+</p>
+
+<p>
+    <b>ESL</b> = <i>The Elements of Statistical Learning: Data Mining, Inference, and Prediction</i>, by Trevor Hastie, Robert Tibshirani and Jerome Friedman. Second Edition. Springer, 2013.
+    <a href="https://web.stanford.edu/~hastie/local.ftp/Springer/OLD/ESLII_print4.pdf">Download</a> (<i>not recommended for beginners</i>).
+</p>
+
+<h2>Online Resources</h2>
+<p>
+  <b>Coursesite: </b> <a href="http://coursesite.lehigh.edu/"> here</a>
+  for posting grades and sending out notifications.
+</p>
+
+<p>
+  <b>Piazza:</b>
+  For posting questions and discussions about assignments and lectures.
+  <!--All students (SCPD and non-SCPD) submit their assignments via <a href="http://www.gradescope.com">Gradescope</a>.  To register for CS276 on Gradescope, first create an account on the website if don't have one already. Join CS276 using the entry code 9WNEZM.-->
+</p>
+
+<p>
+  <b>This website: </b>
+  for posting materials (slides, codes, data, projects) and is the most update-to-date .
+</p>
+
+<p id="schedule"></p>
+<h2>Schedule</h2>
+<!--<p>A tentative schedule, with slides, reading lists, due dates.</p>-->
+<iframe width="1300" height="700" src="https://docs.google.com/spreadsheets/d/1z4gT17E-glxI9aGNd5R1KVmHN6mjNm6_Wop3E-KUMgo/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<!--<div>
+
+<table border="1px solid black" border-collapse="collapse", width="100%">
+    <tr style="background-color:#FFFF99">
+        <td><b>Week</b></td>
+        <td><b>Date</b></td>
+        <td><b>In Class</b></td>
+        <td><b>Assignments<br />(Due 11:59pm)</b></td>
+        <td><b>Who</b></td>
+        <td><b>Materials</b></td>
+    </tr>
+    <tr>
+        <td>Week 1</td>
+        <td style="width:5%">8/30</td>
+        <td style="width:30%">Introduction to the course</td>
+        <td></td>
+        <td>SH</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="width:5%">9/1</td>
+        <td style="width:30%">Introduction to programming in Python and NTLK</td>
+          <td><a href="pa/pa1.pdf"></a></td>
+        <td></td>
+        <td>
+            Collecting text data
+        </td>
+    </tr>
+    <tr>
+        <td>Week 2</td>
+        <td>9/06</td>
+        <td>Text representations</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="width:5%">9/08</td>
+        <td style="width:30%">
+            Text classification, Naive Bayes, Decision Trees
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Week 3</td>
+        <td style="width:5%">9/13</td>
+        <td style="width:30%">
+          Logistic regression (binary, multi-class, optimization), kNN
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+           
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="width:5%">9/15</td>
+        <td style="width:30%"> Text clustering, hierarchical clustering, k-means, co-clustering
+        </td>
+        <td>
+        </td>
+        <td></td>
+        <td>
+        </td>    
+    </tr>
+    <tr>
+        <td>Week 4</td>
+        <td style="width:5%">9/20</td>
+        <td style="width:30%">Topic models, LDA, SVD</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="width:5%">9/22</td>
+        <td style="width:30%">
+            Information retrieval, learning to rank, evaluation metrics, BM25
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Week 5</td>
+        <td>9/27</td>
+        <td>NLP, POS tagging, Parsing</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="width:5%">9/29</td>
+        <td style="width:30%">Name entity recognition, disambiguation, entity resolution</td>
+	   <td>
+       </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Week 6</td>
+        <td style="width:5%">10/04</td>
+        <td style="width:30%">
+            Sentiment analysis and opinion mining, sentiment/opinion detection.
+        </td>
+        <td>
+        </td>
+        <td></td>
+        <td>
+        </td>
+    </tr>
+        <tr>
+        <td></td>
+        <td style="width:5%">10/06</td>
+        <td style="width:30%">Aspect-based sentiment analysis I</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr> 
+    <tr>
+        <td>Week 7</td>
+        <td>10/11</td>
+        <td>Aspect-based sentiment analysis II</td>
+        <td>Project 2 Proposal</td>
+        <td></td>
+        <td>
+        </td>
+    </tr>
+<tr>
+    <td></td>
+    <td>10/13</td>
+    <td>Relation detection (complementary/substitution product)</td>
+    <td>Project 1 Due</td>
+    <td></td>
+    <td>
+	    <a href="https://research.googleblog.com/2013/04/50000-lessons-on-how-to-read-relation.html">Freebase by Google</a>
+    </td>
+</tr>
+    <tr>
+        <td>Week 8</td>
+        <td>10/18</td>
+        <td>Opinion lexicon generation, mining comparative opinions</td>
+        <td></td>
+        <td></td>
+        <td>
+        </td>
+    </tr>
+<tr>
+        <td></td>
+        <td style="width:5%">10/20</td>
+        <td style="width:30%">
+            Text summarization I
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>Week 9</td>
+        <td style="width:5%">10/25</td>
+        <td style="width:30%">
+        Text summarization II
+        </td>
+        <td>
+            
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>10/27</td>
+        <td>
+          Neural network basics
+        </td>
+        <td>Project 2 milestone check</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Week 10</td>
+        <td>11/01</td>
+        <td> NN-based NLP, word embedding (Word2Vec, Glove)
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+        </td>
+    </tr>
+        <tr>
+        <td></td>
+        <td>11/03</td>
+        <td>NN-based sentiment analysis with RNN</td>
+        <td></td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>Week 11</td>
+        <td>11/08</td>
+        <td>
+            <b>Late mid-term</b>
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>11/10</td>
+        <td>Spam detection, outlier/duplicate detection</td>
+        <td></td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>Week 12</td>
+        <td>11/15</td>
+        <td>Group spamming, graph-based methods, truth finding</td>
+        <td></td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <td>11/17</td>
+        <td>Multiple data source text mining, data integration</td>
+        <td></td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td>Week 13</td>
+        <td>11/22</td>
+        <td>Crowdsourcing, with applications in text analytics</td>
+        <td></td>
+        <td></td>
+        <td>
+		<a href="http://www.crowdscale.org/home">Crowdsourcing challenge 2013</a>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>11/24</td>
+        <td>Stream text mining</td>
+        <td></td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td>Week 14</td>
+        <td>11/29</td>
+        <td>Short text mining I</td>
+        <td></td>
+        <td></td>
+        <td>
+            <a href=http://acl2016.org/index.php?article_id=60>Tutorial on ACL 2016</a>
+        </td>
+    </tr>
+    <tr>
+        <td><b></b></td>
+        <td>12/01</td>
+        <td>Short text mining II</td>
+        <td>Project 2 Due</td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td>Week 15</td>
+        <td>12/06</td>
+        <td>Project Presentations</td>
+        <td></td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    <tr>
+        <td><b></b></td>
+        <td>12/08</td>
+        <td>Project Presentations</td>
+        <td></td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+</table>
+
+</div>-->
+
+<p id="projects"></p>
+<br />
+<h2>Projects:</h2>
+<p>The projects can be done in any programming languages you feel comfortable with.
+Sharing and copying solutions are considered as a violation of
+honor code. This includes but not limited to copying solutions from the web, the textbook solution manuals and previous years' submissions.</p>
+<h3>Project 1</h3> 
+<ul>
+<li>
+Individual project, each student will be the only person completing this project. This project consists of implementation of some existing text mining algorithms.
+</li>
+<li>
+    <b>For non-CS students</b>: if you feel that you don't have sufficient programming skills to accomplish this project, please discuss with the instructor
+    for alternatives that are more suitable for you.
+</li>
+<li>
+This year, we will implement a classifier and an information extractor for sentiment analysis using Amazon reviews.
+</li>
+<li>
+The description of the project is <a href="http://www.cse.lehigh.edu/~sxie/teaching/projects/cse498_project1.pdf">here</a>.
+The dataset is <a href="http://www.cse.lehigh.edu/~sxie/teaching/data/reviews_Musical_Instruments_5.json.gz">here</a>.
+The link to Stanford tagger is <a href='http://nlp.stanford.edu/software/stanford-postagger-2015-12-09.zip'>here</a>.
+You may find a Python notebook for file input, output and example of POS tagger
+<a href="http://www.cse.lehigh.edu/~sxie/teaching/code/project_1.ipynb">here</a> (download the file to your local disk and open it in Jupyter).
+</li>
+</ul>
+<h3>Project 2</h3>
+<ul>
+<li>
+This is a team project that can be accomplished with a maximum of 3 students. Undergraduate students are encouraged to team up with graduate students.
+I would recommend forming a team with complementary skills (<b><i>programming</i></b>, domain knowledge, written and oral presentation, etc.)
+<!--The project will be larger than Project 1, so I will provide a skeleton or framework for you to follow.-->
+</li>
+
+<!--
+<li>
+Assume that the team members have accomplished most (if not all) components of Project 1,
+This project looks for creativity
+in applying text mining to areas outside computer science (like education, finance, healthcare, business, etc.).
+</li>
+-->
+<li>
+The project will generate deliverables including a 15-20 mins in-class presentations and final product (runnable demos or quantiative results, along with a
+technical report).
+</li>
+<li>
+Individual team members will specify <b> their and other team members' </b> contributions to the project in their technical report.
+In the extreme case where a team member contributes superficially, the grades of the member for the project will be adjusted accordingly.
+The final presentations will also be evaluated by other students in the classroom.
+</li>
+
+<li>
+Details can be found <a href='http://www.cse.lehigh.edu/~sxie/teaching/projects/cse498_project2.pdf'>here</a>.
+Deadlines of various deliverables can be found in the course <a href='#schedule'>schedule</a>.
+</li>
+
+</ul>
+
+<p id="datasets"></p>
+<br/>
+<h2> Datasets:</h2>
+<ul>
+<li>
+Amazon QA data: http://jmcauley.ucsd.edu/data/amazon/qa/
+</li>
+<li>
+Amazon product review data: http://www.cse.lehigh.edu/~sxie/teaching/data/reviews_Musical_Instruments_5.json.gz <!-- http://jmcauley.ucsd.edu/data/amazon/-->
+</li>
+<li>
+Yelp restaurant review data: <a href="http://www.yelp.com/dataset_ challenge/">Yelp challenge</a>.
+</li>
+<li>
+Sentiment analysis challenges: <a href="http://alt.qcri.org/semeval2016/">SemeVal2016</a>.
+</li>
+<li>
+Google and Microsoft n-gram query: <a href="http://stackoverflow.com/questions/11260833/google-n-gram-web-api">A stackoverflow answer</a>.
+</li>
+<li>
+Annotated reviews for sentiment analysis (along with papers) <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html/">Prof. Bing Liu's project page</a>.
+</li>
+</ul>
+<hr align="center" size="2" width="100%">
+</div>
+</body>
+	
+</html>

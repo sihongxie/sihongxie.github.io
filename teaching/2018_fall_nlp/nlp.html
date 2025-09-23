@@ -1,0 +1,305 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 398/498: Natural Language Processing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+<style>
+h1 {
+	font-size:20.5pt;
+	font-weight:bold;
+	color:#336666;
+}
+h2 {
+	font-size:16.0pt;
+	font-weight:bold;
+	color:#336666;
+}
+h3 {
+	font-size:12.0pt;
+}
+a:link {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+a:visited {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif
+}
+td
+{
+	text-align:center;
+	border:1px solid black;
+	font-size:9.0 pt;
+}
+td.main
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+	text-align:left;
+	valign:top;
+	border:0px;
+}
+table
+{
+	border:1px solid black;
+	border-collapse: collapse;
+	width:"100%";
+}
+table.main
+{
+	border:0px;
+}
+.Title
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:16pt; 
+	font-weight:bold;
+	color:#FFFFFF;
+}
+.Lecturers
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12pt; 
+    font-weight:bold;
+    color:#FFFFFF;
+}
+a.buttons:visited {
+    color: white;
+    text-decoration: one;
+}
+a.buttons:link{
+    color: white;
+    text-decoration: none;
+}
+a.buttons:hover {
+    color: gray;
+}
+b { font-weight: bold; }
+
+.tab { margin-left: 23px; }
+</style>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link=blue vlink=blue>
+<div class="navbar-fixed-top" style="top=0px;left=10px;background-color:rgb(77,51,1)">
+<table class=main cellpadding="0" style="margin-left:10px;margin-right:10px;margin-bottom:10px;margin-top:10px">
+  <tr>
+      <!--
+    <td class=main width=105><p><img width=112 height=112 src="images/SU_Seal_Card_pos_small.gif" alt="Stanford University"></p></td>
+       -->
+    <td class=main>
+      <p class="Title">
+            CS 398-013/498-013: Natural Language Processing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fall 2018
+      </p>
+      <p class="Lecturers">
+        Prof. Sihong Xie
+      </p>
+      <!--<a class="buttons" href="index.html"><b>Home</b></a> &nbsp;&nbsp;-->
+      <a class="buttons" href="#courseinfo"><b>Course Info</b></a> &nbsp;&nbsp;
+      <a href="#books" class="buttons"><b>Books</b></a> &nbsp; &nbsp;  
+        <a class="buttons" href="#schedule"><b>Schedule</b></a> &nbsp;&nbsp;
+      <a class="buttons" href="#projects"><b>Projects</b></a> &nbsp;&nbsp;
+      <a href="#datasets" class="buttons"><b>Datasets</b></a> &nbsp; &nbsp;
+      <!--<a class ="buttons" href="coursepolicy.html"><b>Course Policies</b></a> &nbsp;&nbsp;-->
+      <!--<a href=" https://www.coursera.org/learn/cs276" class="buttons"><b>Coursera</b></a> &nbsp;&nbsp;
+      <a href="https://piazza.com/stanford/spring2016/cs276/home" class="buttons"><b>Piazza</b></a> &nbsp;&nbsp;
+      <a href=" https://mvideox.stanford.edu/Course/706" class="buttons"><b>In-class lectures</b></a>-->
+	</td>
+  </tr>
+</table>
+<!--<hr align="center" size="2" width="100%">-->
+</div>
+
+<div class="hero-unit" width="10px">
+<p id="courseinfo"><br/><br/></p>
+<!--<p style="font-size:22pt;color:#336666">CS 398/498: Text Mining</p> -->
+
+<h2>Course Information</h2>
+
+<p class='tab'><b>Syllabus </b> <a href="syllabus.pdf">PDF</a></p>
+
+<p class='tab'><b>Description: </b>
+Overview of modern natural language processing techniques: text normalization, language model, part-of-speech tagging, hidden Markov model, syntatic and dependency parsing, semantics, word sense, reference resolution, dialog agent, machine translation. Four class projects are designed for the students to implement and evaluate classic NLP algorithms. Credit will not be given for both CSE 398 and CSE 498.
+</p>
+
+<p class='tab'><b>Lectures:</b> Monday/Wednesday 12:45-2:00, Room 115, Building C <br /></p>
+
+<p class='tab'><b>Office Hours: </b> Monday/Wednesday right before class 11:30pm - 12:30 pm, or by appointment, Room 326, Building C <br/></p>
+
+<p class='tab'><b>Prerequisites:</b> <!-- Linear algebra (MATH 242 or 205), --> 
+For CSE 398: (MATH 231 or ECO 045) and (CSE017), for CSE 498 instructor permission is required.<br>
+We will mainly use Java for projects.
+Relevant programming and math concepts will be discussed briefly only when necessary.
+</p>
+
+<p class='tab'><b>Formats:</b>
+1 closed-book mid-term, 1 closed-book final exam, 4 coding projects.
+
+<p class='tab'><b>Grading:</b>
+Mid-term (15%), coding projects (15% each), final (25%).
+There is no homework or quiz.
+Late submissions will be penalized 20% of the total grades per late day (24 hours or part thereof)
+and no assignment will be accepted more than four days after its due date.
+The projects will graded partly based on your programs' performance in terms of metrics defined in individual projects.
+
+<!--
+<p>
+  <b>TAs: </b> Panupong Pasupat (<b>Head TA</b>), Pujun Bhatnagar, Jade Huang, Jiang Han, Shubham Gupta, Nihit Desai
+</p>
+-->
+<!--<p>For a detailed schedule, check out the Google calendar using the link
+<a href= " https://www.google.com/calendar/embed?src=u1cjiug7hslnp9nekkc213delc%40group.calendar.google.com">here</a>.</p>
+<p><strong>Daytime Office Hours</strong></p>
+<ul>
+  
+  <li><strong>Monday: </strong>Room: Gates B24, Time: 9:30 am - 10:30 am</li>
+  <li><strong>Monday: </strong>Room: Gates B24, Time:  2:00 pm - 3:00 pm</li>
+  <li><strong>Wednesday: </strong>Room: Gates B24, Time: 11:00 am - 12:00 pm</li>
+  <li><strong>Friday: </strong>Room: Gates B24, Time:  1:00 pm - 2:00 pm</li>
+  
+</ul>
+<p><strong>Evening Code Sessions</strong></p>
+<ul>
+  
+  <li><strong>Tuesday: </strong>Room: 160-318 (Wallenberg Hall, Main Quad), Time: 7:00 pm - 10:00 pm </li>
+  <li><strong>Wednesday: </strong>Room: 160-318 (Wallenberg Hall, Main Quad), Time: 6:00 pm - 9:00 pm</li>
+  
+</ul>
+For the most part, the weekly schedule below is fixed. However, occasionally there might be changes to schedule given above. Please check <a href="https://calendar.google.com/calendar/embed?src=3in636i4ltc1re4143sr1e8lns%40group.calendar.google.com">this calendar</a> before visiting office hours. We will try to avoid last minute changes and will make a Piazza announcement if necessary. For SCPD students, we will be available via Google hangout. Hangout link will be posted on Piazza.
+-->
+
+<p id="books"></p>
+<br />
+<h2>Textbooks</h2>
+<!--
+<p>The students are encouraged to read the required materials listed in the schedule section before attending class.
+Problems in exams and quizzes will be based on the required readings.</p>
+-->
+
+<p class='tab'><b>SLP2</b>= <i>Speech and Language Processing</i>, 2nd Edition by Daniel Jurafsky, James H. Martin.
+</p>
+
+<p class='tab'><b>SLP3</b>= <i>Speech and Language Processing</i>, 3nd Edition by Daniel Jurafsky, James H. Martin.
+Most chapters freely available at <a href="http://web.stanford.edu/~jurafsky/slp3/">Link</a>.
+</p>
+
+<p class='tab'><b>FSNLP</b>= <i>Foundations of statistical natural language processing</i>, by Manning, Christopher D., Schütze, Hinrich. Cambridge, Mass.: MIT Press, 2000.
+Paper book available at Linderman Reserve and <a href="https://asa.lib.lehigh.edu/Record/10680488">Ebook available to Lehigh users</a>.
+</p>
+
+<p id="online"></p>
+<br />
+<h2>Online Resources</h2>
+<p class='tab'>
+  <b>Coursesite: </b>
+  for posting grades only <a href="http://coursesite.lehigh.edu/"> Link</a>.
+</p>
+
+<p class='tab'>
+  <b>Piazza:</b>
+  you may post your questions that can be answered by the instructor and other students  <a href="https://piazza.com/class/jlb6xtlbp1f6ca"> Link</a>.
+</p>
+
+<p class='tab'>
+  <b>This website: </b>
+  for general information and resources (codes, data, projects).
+</p>
+
+
+<p id="schedule"></p>
+<br />
+<h2>Schedule </h2>
+<p class='tab'>The following topics will be coverved (tentatively): words (language models); grammar (parts-of-speech tagging, inference and training algorithms for HMM, grammar and syntactic parsing, dependency parsing);
+semantics (word sense, semantics role labeling); discourse (coreference resolution and summarization); application (machine translation, conversational agents).</p>
+<p align="center">
+
+<iframe width="1007" height="750"
+	src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKPYjvJHT5o_q_Xs1tlQZCaSTTp3_cb__jNUVv9Fatq0TEIulrKaWEXqu6TcBlZKRMsJb2NamSoJr0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+	></iframe>
+
+
+<p id="projects"></p>
+<br />
+<h2>Projects </h2>
+
+There are four programming projects, with increasing difficulty, corresponding to 4 levels of NLP: words, syntax, semantics and pragmatics.
+Each student needs to implement the projects using JAVA to get full credit (these are <i>NOT</i> team  projects!).
+Project descriptions and code sketches will be released about 3 weeks before the due dates of the corresponding projects.
+
+Sharing and copying solutions are considered as a violation of
+honor code. This includes but not limited to copying solutions from the web, the textbook solution manuals and previous years' submissions.</p>
+
+<ul> 
+<li style="margin-bottom: 8px;">
+<b>Project 1</b>
+asks you to implement a corpus-based spell-checker using N-grams. Several variations of N-grams estimators will be tested on some popular corpora.
+Through this project, you will learn how to process text data using Java, how to extract and utilize useful statistics from texts, how to evaluate a spell checker.
+[<a href='project1.pdf'>Project Description</a>]
+</li>
+
+<li style="margin-bottom: 8px;">
+<b>Project 2</b>
+asks you to build a POS tagger using HMM.
+Through this project, key algorithms for HMM, such as the Viterbi and Baum–Welch algorithms will implemented and tested.
+[<a href='project2.pdf'>Project Description</a>]
+</li>
+
+<li style="margin-bottom: 8px">
+<b>Project 3</b> 
+will guide you in building a simple CFG syntactic parser.
+[<a href='project3.pdf'>Project Description</a>]
+</li>
+
+<li style="margin-bottom: 8px">
+<b>Project 4</b> 
+asks you to implement the Lesk algorithm for word sense disambiguation.
+[<a href='project4.pdf'>Project Description</a>]
+</li>
+</ul>
+
+<p id="datasets"></p>
+<br/>
+<h2> Datasets:</h2>
+<ul>
+<li>
+<a href="http://boston.lti.cs.cmu.edu/callan/Data/">CMU datasets for information retrieval</a>.
+</li>
+<li>
+<a href="https://stackoverflow.com/questions/25330079/where-can-i-get-training-data-of-part-of-speech-tagger">Datasets for training POS tagger</a>.
+</li>
+<li>
+<a href="http://www.anc.org/data/masc/downloads/data-download/">Treebank annotations for training syntactic parser</a>.
+</li>
+<li>
+<a href="http://www.anc.org/data/masc/downloads/data-download/">Amazon QA data</a>.
+</li>
+<li>
+<a href="http://www.anc.org/data/masc/downloads/data-download/">Amazon product review data</a>.
+</li>
+<li>
+Yelp restaurant review data: <a href="http://www.yelp.com/dataset_ challenge/">Yelp challenge</a>.
+</li>
+<li>
+Sentiment analysis challenges: <a href="http://alt.qcri.org/semeval2016/">SemeVal2016</a>.
+</li>
+<li>
+Google and Microsoft n-gram query: <a href="http://stackoverflow.com/questions/11260833/google-n-gram-web-api">A stackoverflow answer</a>.
+</li>
+<li>
+Annotated reviews for sentiment analysis (along with papers) <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html/">Prof. Bing Liu's project page</a>.
+</li>
+<li>
+Google Word Sense Disambiguation Corpora <a href="https://research.googleblog.com/2017/01/a-large-corpus-for-supervised-word.html">Link</a>.
+</li>
+</ul>
+<hr align="center" size="2" width="100%">
+</div>
+</body>
+	
+</html>

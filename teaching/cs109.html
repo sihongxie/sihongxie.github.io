@@ -1,0 +1,166 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>C++ FAQ</title>
+</head>
+
+<body>
+
+<h2>C++ FAQ</h2>
+<br>
+<i>last updated: Oct 29, 2010, please forward questions to sxie6@uic.edu</i> <br>
+<p>
+Q1: <i>How to understand passing by reference and by value?</i></p>
+<p>
+Answer: Passing by reference is a new language feature in C++, which allows you 
+to modify the value of a variable INSIDE a function. It works like this: when 
+calling a function, the address of the actual argument is copied to the formal 
+argument, then you can use that address in your function to change the value of 
+that argument, (though you use it like a normal variable, i.e., you don't need 
+to know that it is a address and do extra works, that's why passing by reference 
+is usually better than passing an address) You can think about this as two names 
+(for actual and formal argument, resp.) referring to a single address. </p>
+<p>
+Compared with arguments passed by value, when calling the function, the language 
+will actually create a new variable of the same type (the formal variable), copy 
+the value of the actual argument to this newly created variable, which is then 
+passed to the function. Therefore, the formal argument is different from the 
+actual argument. In this way, the function doesn't know the address of the 
+actual argument and there is no way to modify the value of the actual argument. 
+After the function ends (when it returns), the variable created when calling the 
+function disappears.</p>
+
+<p>Q2:
+<i>What's the relationship between .h file and .cpp file</i>
+</p>
+<p>Answer:Usually, we use .h and .cpp file to separate the declaration and implementation (definition)
+of functions. From the view of design, the programmer or the designer sometimes don't want the user to know
+how they solve the problem, they just want the users to learn how to use the functions they provide.
+This is a kind of information hiding, which is common in commercial softwares.</p>
+<p>So the programmer (here, you're the programmer) put the class declarations in the header file (.h)
+and the class implementation/definition in the source file (.cpp)</p>
+<p>Information hiding is not restricted to <i>class</i> things. You can separate the declaration and implementation of functions
+using header file and source file, too.
+</p>
+
+<p>Q3:
+<i>Can you give me an example of operator overloading</i>
+</p>
+<p>Answer: My pleasure.</p>
+<a href="teaching/code/Integer.h">Integer.h</a>
+<a href="teaching/code/Integer.cpp">Integer.cpp</a>
+<a href="teaching/code/main.cpp">main.cpp</a>
+<p>You need to build a new project to hold these three files.</p>
+
+<p>Q4:
+<i>The determinant function without parameters/arguments in lab 9 seems impossible, can you give me a hint?</i>
+</p>
+<p>Answer: No, it is possible to implement such recursive algorithm, with the help of a data structure called "Stack".
+Whatever, you're not required to accoomplish this "mission impossible", what you need to do in the assignment is
+to copy your old codes of determinant to your class, make it a member function, then in you parameter-free version
+of determinant function, make a call to the "good-old" determinant function, that's it.</p>
+
+<h2>MATLAB FAQ</h2>
+<p>Q5:
+<i>Is it possible to input a matrix using the MALTAB's input function?</i>
+</p>
+<p>Answer:
+Yes, you should ask the user to put their matrix (therefore vector) in the MATLAB syntax, then MATLAB will recognize the string as a matrix.
+For example:<br>
+A = input("please input a 3 by 4 matrix");<br>
+and if the user input:<br>
+[1,2,3,4;5,6,7,8;9,10,11,12]
+then A will be a matrix, taking 1 2 3 4 as its first row, 5 6 7 8 as its second row, and so on.
+You should try it out in your assignment. Note that a "," is used to separate the columns
+and ";" is for separate the rows.
+</p>
+
+<p>Q6:
+<i>How to understand the example given in the Lab 10 assignment? What's a, b, and what's b(x)?</i>
+</p>
+<p>Answer:
+First, a and b are vectors of the same length, for example<br>
+a=5:14   % you should type this line in MATLAB to see what are in a
+b=ones(1,10) % the same as above, if you're serious, type in this line in MATLAB
+Second, the intention of the code<br>
+if (a < 10) then
+b = b + 1
+else
+b = b + 10
+means that for every element in a, if it is less than 10, then add 1 to the element in b in the same position.
+Otherwise, add 10 to that element.
+For example, the first element in a is 5, so you add 1 to the first element of b, i.e., we have b(1) equal to 2.
+the last element of a is 14, which is larger than 10, so add 10 to the last element of b, so b(10) equals to 11.<br>
+x = a < 10<br>
+is a logical vector with its elements indicating whether the corresponding element in a is less than 10 or not.
+The first element of x is false, and the last element of x is true.
+then<br>
+b(x)=b(x).+9
+means that if you have true in some position(s) in x, then the element of b in that corresponding place will increased by 9.
+For example, the first element in x is false, so nothing happen to the first element of b, but the last element in x is true,
+then MATLAB adds 9 to the last element of b, which equals to 10 at last.
+</p>
+
+<p>Q7:
+<i></i>
+</p>
+<p>
+Answer: suppose we have an vector containing some random numbers, for those who have values large than 0.5, I want to suppress them, so
+I multiple them by 0.5. For those with values less than 0.3, I want to enlarge them, so I multiple them by 2. How to do this without
+for loop and if/else statements?<br>
+a=rand(1,10);	% generate a 1 by 10 random matrix<br>
+x=(a>0.5);<br>
+y=(a<0.3);<br>
+a(x)=a(x)*0.5;<br>
+a(y)=a(y)*2;<br>
+what if I want to add 2 to those elements in a with values between 0.3 and 0.5? I simply need to obtain 
+another indicator vector like<br>
+z=(a<=0.5 & a>=0.3)<br>
+then you can do some operation to these elements in a according to z.
+</p>
+
+<p>Q8:
+<i>How to get input in a vector form?</i>
+</p>
+<p>
+Answer: In MATLAB, you should try your best to avoid using loop.
+For example, you are going to let the user input a series of numbers, like salaries, you can write:</br>
+salaries=input('please input salaries in vector format like [2000, 90, 1200]');</br>
+then salaries will be an vector with its elements specified in the user's input,
+though looked strange to the user, but it is more efficient.
+</p>
+
+<p>Q9:
+<i>How to understand the bacteria growth?</i>
+</p>
+<p>
+Answer: You can think of the growth process as a series of natural numbers, where the next one is stochastically determined by the previous one only.
+Each natural number (the t-th number is denoted by N(t)) is the population size at the t-th generation. So it is quite natural to understand
+that the size of the current population is indeed determined by the previous size.</br>
+The more subtle thing is the probability. N(t) is not deterministically given by some fixed function, rather, it is governed by some probability.
+For example,  N(t) could be N(t-1) + 1 with probability 0.6 and be N(t-1) - 1 with probability 0.3 and be N(t-1) - 2 with probability 0.1.</br>
+Of course, we're not going to directly calculate such probabilities since it is quite complex, what we are going to do is to 'simulate' the bacteria
+growth to get N(t), though the simulation does involve some simpler probability calculation.</br>
+To get N(t), you can determined how each individual in the (t-1)-th generation behaves: whether it copies itself (then the size grows by 1) or it dies (then the
+size decreases by 1). After you have the behaviors of all individuals, you know how many bacteria are there in the t-th generation.</br>
+How do we know a bacterium behaves? Here the probability comes into play: with probability <i>p</i>, it copies itself, otherwise, it dies.
+The bacterium has to make a decision, it can't do both (though maybe a human can clone himself/herself even when he/she dies). 
+</p>
+
+<p>Q10:
+<i> How to simulate the probability distribution</i>
+</p>
+<p>Answer:
+In the assignment, a bacterium copies itself with probability <i>p</i>, and dies with probability 1-<i>p</i>, you can simulate this process using
+uniform distribution function provided by MATLAB:</br>
+r=rand(1);</br>
+if (r<=p)</br>
+% copies itself</br>
+else</br>
+% dies</br>
+end</br>
+</p>
+</body>
+</html>

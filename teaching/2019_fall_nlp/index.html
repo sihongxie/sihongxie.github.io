@@ -1,0 +1,345 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 325/425: Natural Language Processing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+<style>
+h1 {
+	font-size:20.5pt;
+	font-weight:bold;
+	color:#336666;
+}
+h2 {
+	font-size:16.0pt;
+	font-weight:bold;
+	color:#336666;
+}
+h3 {
+	font-size:12.0pt;
+}
+a:link {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+a:visited {
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif
+}
+td
+{
+	text-align:center;
+	border:1px solid black;
+	font-size:9.0 pt;
+}
+td.main
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+	text-align:left;
+	valign:top;
+	border:0px;
+}
+table
+{
+	border:1px solid black;
+	border-collapse: collapse;
+	width:"100%";
+}
+table.main
+{
+	border:0px;
+}
+.Title
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:16pt; 
+	font-weight:bold;
+	color:#FFFFFF;
+}
+.Lecturers
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12pt; 
+    font-weight:bold;
+    color:#FFFFFF;
+}
+a.buttons:visited {
+    color: white;
+    text-decoration: one;
+}
+a.buttons:link{
+    color: white;
+    text-decoration: none;
+}
+a.buttons:hover {
+    color: gray;
+}
+b { font-weight: bold; }
+
+.tab { 
+	margin-left: 30px;
+    font-size:11pt; 
+}
+</style>
+</head>
+<body bgcolor=#FFFFFF lang=EN-US link=blue vlink=blue>
+<div class="navbar-fixed-top" style="top=0px;left=10px;background-color:rgb(77,51,1)">
+<table class=main cellpadding="0" style="margin-left:10px;margin-right:10px;margin-bottom:10px;margin-top:10px">
+  <tr>
+      <!--
+    <td class=main width=105><p><img width=112 height=112 src="images/SU_Seal_Card_pos_small.gif" alt="Stanford University"></p></td>
+       -->
+    <td class=main>
+      <p class="Title">
+            CS 325-010/425-010: Natural Language Processing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fall 2019
+      </p>
+      <p class="Lecturers">
+        Prof. Sihong Xie
+      </p>
+      <!--<a class="buttons" href="index.html"><b>Home</b></a> &nbsp;&nbsp;-->
+      <a class="buttons" href="#courseinfo"><b>Course Info</b></a> &nbsp;&nbsp;
+      <a href="#books" class="buttons"><b>Books</b></a> &nbsp; &nbsp;  
+        <a class="buttons" href="#schedule"><b>Schedule</b></a> &nbsp;&nbsp;
+      <a class="buttons" href="#assignments"><b>Assignments</b></a> &nbsp;&nbsp;
+      <a class="buttons" href="#projects"><b>Projects</b></a> &nbsp;&nbsp;
+      <a href="#datasets" class="buttons"><b>Datasets</b></a> &nbsp; &nbsp;
+      <!--<a class ="buttons" href="coursepolicy.html"><b>Course Policies</b></a> &nbsp;&nbsp;-->
+      <!--<a href=" https://www.coursera.org/learn/cs276" class="buttons"><b>Coursera</b></a> &nbsp;&nbsp;
+      <a href="https://piazza.com/stanford/spring2016/cs276/home" class="buttons"><b>Piazza</b></a> &nbsp;&nbsp;
+      <a href=" https://mvideox.stanford.edu/Course/706" class="buttons"><b>In-class lectures</b></a>-->
+	</td>
+  </tr>
+</table>
+<!--<hr align="center" size="2" width="100%">-->
+</div>
+
+<div class="hero-unit" width="10px">
+<p id="courseinfo"><br/><br/></p>
+<!--<p style="font-size:22pt;color:#336666">CS 398/498: Text Mining</p> -->
+
+<h2>Course Information</h2>
+
+<p class='tab'><b>Syllabus </b> <a href="syllabus.pdf">PDF</a></p>
+
+<p class='tab'><b>Description: </b>
+This class will cover both the traditional and the recent 
+<a href='https://en.wikipedia.org/wiki/Deep_learning'>Deep Learning</a>-based NLP concepts and techniques.
+Topics include: language model, word sense and embedding, part-of-speech tagging, hidden Markov model, sequence-to-sequence models (RNNs and attention mechanisms)
+dependency parsing, and relation extraction.
+GPU computing facility will be provided to explore the state-of-the-art deep NLP models.
+Credit will not be given for both CSE 325 and CSE 425.
+</p>
+
+<p class='tab'><b>Lectures:</b> Monday/Wednesday 12:40 PM - 01:55 PM, Room 115, Building C <br /></p>
+
+<p class='tab'><b>Lab:</b> SandBox, Room 112, Packard Lab <br /></p>
+
+<p class='tab'><b>Office Hours: </b> Monday/Wednesday 4:00 pm - 5:00 pm, or by appointment, Room 326, Building C <br/></p>
+
+<p class='tab'><b>Prerequisites:</b> <!-- Linear algebra (MATH 242 or 205), --> 
+For CSE 325: (MATH 231 or ECO 045) and (CSE017), for CSE 425 instructor permission is required.<br>
+We will use Python and <a href="https://pytorch.org">PyTorch</a> for projects.
+The course is self-contained but is easier if you have a background in data mining or machine learning (multivariate derivatives, optimization, and neural networks).
+Relevant programming and math concepts will be discussed briefly only when necessary.
+</p>
+
+<p class='tab'><b>Format:</b>
+In-class lectures and student presentations; programming assignments; research projects (optional for undergraduates).
+
+<p id="books"></p>
+<br />
+<h2>Textbooks</h2>
+<p class='tab'>All textbooks are optional.
+Most of the materials, including the math and the implementations are freely available online.
+</p>
+<p class='tab'><b>SLP3</b> = <i>Speech and Language Processing</i>, 3nd Edition by Daniel Jurafsky, James H. Martin. 2019 Draft.
+Most chapters freely available at <a href="http://web.stanford.edu/~jurafsky/slp3/">Link</a>.
+</p>
+
+<p class='tab'><b>FSNLP</b> = <i>Foundations of statistical natural language processing</i>, by Manning, Christopher D., Schütze, Hinrich. Cambridge, Mass.: MIT Press, 2000.
+Paper book available at Linderman Reserve and <a href="https://asa.lib.lehigh.edu/Record/10680488">Ebook available to Lehigh users</a>.
+</p>
+
+<p class='tab'><b>DLNLP</b> = <i>
+Deep Learning for Natural Language Processing</i>
+,by Stephan Raaijmakers. Manning Publications. 2019.
+<a href="https://www.manning.com/books/deep-learning-for-natural-language-processing?gclid=EAIaIQobChMI8_ipuIjG4QIVCYnICh01Lg63EAQYASABEgK7ePD_BwE">Purchase Link</a>.
+</p>
+
+<p class='tab'><b>DL</b> = <i>
+Deep Learning, </i>
+by Ian Goodfellow and Yoshua Bengio and Aaron Courville. MIT Press. 2016.
+<a href="https://www.deeplearningbook.org/">Link</a>.
+</p>
+
+<p class='tab'><b>NNMNLP</b> = <i>
+Neural Network Methods for Natural Language Processing, </i>
+by Yoav Goldberg. Morgan & Claypool Publishers. 2017.
+<a href="https://www.amazon.com/Language-Processing-Synthesis-Lectures-Technologies-ebook/dp/B071FGKZMH">Link</a>.
+</p>
+
+<p id="online"></p>
+<br />
+<h2>Online Resources</h2>
+<p class='tab'>
+  <b>Coursesite: </b>
+  for posting grades only <a href="http://coursesite.lehigh.edu/"> Link</a>.
+</p>
+
+<p class='tab'>
+  <b>Piazza:</b>
+  you may post your questions that can be answered by the instructor and other students  <a href="https://piazza.com/class/jzkm2nk53ye40l"> Link</a>.
+</p>
+
+<p class='tab'>
+  <b>This website: </b>
+  for general information and resources (codes, data, projects).
+</p>
+
+
+<p id="schedule"></p>
+<br />
+<h2>Schedule</h2>
+<p class='tab'>
+The following topics will be coverved (tentatively):
+language models and word embedding;
+machine learning and deep learning basics;
+PyTorch programming;
+syntactics (parts-of-speech tagging, HMM and CRF);
+sequence-to-sequence models (RNN, CNN, attention models);
+relation extraction.
+<p align="center">
+
+<iframe width="1400" height="750"
+src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_K_h1AgLvBD5Y7S4atbSDPrMCCFFR_Rjv1437qb-wAxmnL-UsRnwH_JMyzBlnP3tbAxNfNGAxIQmU/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+	></iframe>
+
+<p id="assignments"></p>
+<br />
+<h2>Programming assignments</h2>
+<p class='tab'>
+There are programming assignments that use deep neural networks for three common NLP tasks:
+word embedding, POS tagging, and relation extraction.
+<b>Grading</b>:
+Each student has 6 late days in total without penalty and the student decides how to use them.
+Beyond the late quota,
+late submissions will be penalized 20% of the total grades per late day (24 hours or part thereof)
+and no assignment or project will be accepted more than four days after its due date.
+The assignments and project will be graded partly based on your programs' performance in terms of metrics defined in individual assignments.
+<b>Submission</b>: Assignments are submitted via CourseSite.
+<b>Collaboration</b>: Make sure you write your own codes. If you refer to any sources, you need to list them on top of your submitted readme file.
+Sharing and copying solutions are considered as a violation of
+honor code. This includes but not limited to copying solutions from the web,
+the textbook solution manuals and previous years' submissions.</p>
+
+<ul style='margin-bottom: 8px;font-size:11pt;'> 
+	<li>
+<b>Assignment 1</b> (credit: 10% for graduates; 20 % for undergraduates):
+Word embedding using Word2Vec.
+[<a href='.'>Description coming soon</a>]
+</li>
+
+<li>
+<b>Assignment 2</b> (credit: 25% for graduates; 45 % for undergraduates):
+Sequence-to-sequence model for POS tagging.
+[<a href='.'>Description coming soon</a>]
+</li>
+
+<li>
+<b>Assignment 3</b> (credit: 25% for graduates; 35 % for undergraduates):
+Relation extraction using RNN and CNN.
+[<a href='.'>Description coming soon</a>]
+</li>
+</ul>
+</p>
+
+<p id="projects"></p>
+<br />
+<h2>Research Project</h2>
+
+<p class='tab'>
+Each graduate student needs to reproduce the results of an NLP research paper using PyTorch to get 40% of the total credit.
+<b>Grading</b>: The project is evaluated based on your depth of understanding of a research paper and how much you reproduce the experiments.
+The 6 late days quota can be used for submissions of the final report.
+<b>Submission</b>: the proposal, presentation slides, and final report are submitted via CourseSite.
+<b>Collaboration</b>: this is an individual project. You can use any online resources but need to indicate the sources in your final report.
+
+<ul style='margin-bottom: 8px;font-size:11pt;'> 
+	<li>
+	<b>Proposal</b> (credit: 5%): Find a suitable project from this <a href='projects.html'>list</a>.
+	Then submit a two-page proposal describing: the problem definition, the data available, the NLP model, and the training and evaluation protocol.
+	No need to get a lot of details figured out but just the general ideas.
+	</li>
+
+<li>
+<b>Discussion</b> (credit: 5%):
+Arrange a 10 min slot with the instructor to describe your project midway through the course.
+</li>
+
+<li>
+<b>Presentation</b> (credit: 10%):
+The graduate presentations will be graded based on the clearness and depth.
+</li>
+
+<li>
+<b>Final Report</b>  (credit: 20%): reproduce experiments of a research paper using PyTorch and report your experimental outcomes.
+</li>
+</ul>
+</p>
+
+<p id="datasets"></p>
+<br/>
+<h2> NLP Resources:</h2>
+<ul style='margin-bottom: 8px;font-size:11pt;'>
+<li>
+<a href="http://aan.how/about/">All about NLP (AAN)</a>.
+</li>
+<li>
+<a href="https://www.clips.uantwerpen.be/conll2003/ner/">CONLL2003 Corpora for NER (Named Entity Recognition)</a>.
+</li>
+<li>
+<a href="https://towardsdatascience.com/deep-learning-for-ner-1-public-datasets-and-annotation-methods-8b1ad5e98caf">Links to other NER corpora</a>.
+</li>
+<li>
+<a href="http://boston.lti.cs.cmu.edu/callan/Data/">CMU datasets for information retrieval</a>.
+</li>
+<li>
+<a href="https://stackoverflow.com/questions/25330079/where-can-i-get-training-data-of-part-of-speech-tagger">Datasets for training POS tagger</a>.
+</li>
+<li>
+<a href="http://www.anc.org/data/masc/downloads/data-download/">Treebank annotations for training syntactic parser</a>.
+</li>
+<li>
+<a href="http://www.anc.org/data/masc/downloads/data-download/">Amazon QA data</a>.
+</li>
+<li>
+<a href="http://www.anc.org/data/masc/downloads/data-download/">Amazon product review data</a>.
+</li>
+<li>
+Yelp restaurant review data: <a href="http://www.yelp.com/dataset_ challenge/">Yelp challenge</a>.
+</li>
+<li>
+Sentiment analysis challenges: <a href="http://alt.qcri.org/semeval2016/">SemeVal2016</a>.
+</li>
+<li>
+Google and Microsoft n-gram query: <a href="http://stackoverflow.com/questions/11260833/google-n-gram-web-api">A stackoverflow answer</a>.
+</li>
+<li>
+Annotated reviews for sentiment analysis (along with papers) <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html/">Prof. Bing Liu's project page</a>.
+</li>
+<li>
+Google Word Sense Disambiguation Corpora <a href="https://research.googleblog.com/2017/01/a-large-corpus-for-supervised-word.html">Link</a>.
+</li>
+</ul>
+<hr align="center" size="2" width="100%">
+</div>
+</body>
+	
+</html>
