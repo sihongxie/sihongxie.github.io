@@ -54,6 +54,9 @@ h3 { font-size: 1.05rem; font-weight: 600; color: rgba(0,0,0,0.85); margin-botto
 }
 .card + .card { margin-top: 0.75rem; }
 
+/* Reset card margin within grid layouts — gap handles spacing */
+.grid-2 > .card, .grid-3 > .card { margin-top: 0; }
+
 /* Section labels */
 .section-label {
   font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
