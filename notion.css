@@ -72,6 +72,16 @@ h3 { font-size: 1.05rem; font-weight: 600; color: rgba(0,0,0,0.85); margin-botto
   background: #f2f9ff; color: #097fe8;
 }
 
+/* Highlighted conference tags (Oral / Spotlight) */
+.tag-oral {
+  background: #fff1e6; color: #c2410c; border: 1px solid #fdba74;
+  font-weight: 700;
+}
+.tag-spotlight {
+  background: #f5f3ff; color: #6d28d9; border: 1px solid #c4b5fd;
+  font-weight: 700;
+}
+
 /* Divider */
 hr { border: none; border-top: 1px solid rgba(0,0,0,0.06); margin: 2rem 0; }
 
